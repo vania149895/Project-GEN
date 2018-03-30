@@ -1,0 +1,59 @@
+
+body{
+	color: #1f487c;
+	font-size: 14px;
+}
+
+.container{
+	width: 1200px; /* Ширина элемента в пикселах */
+    padding: 10px; /* Поля вокруг текста */
+    margin: auto;
+}
+
+
+.style1{
+	margin-bottom: 10px;
+}
+
+
+.col {
+ /*   -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;*/
+    max-width: 25%;
+}
+
+textarea{
+	height: 150px;
+}
+
+
+.flex-column{
+	flex-direction: row!important;
+	text-align: center;
+}
+
+.form-group1{
+	margin-top: 20px; 
+}
+
+.curse{
+	margin-left: 50px
+}
+
+.jumbotron{
+	background-color: #1f487c;
+	color: #ffffff;
+}
+
+ol{
+	background-color: #1f487c!important;
+	color: #ffffff!important;
+}
+
+li{
+	color: #ffffff!important;
+	margin-left: 20px
+}
