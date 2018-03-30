@@ -13,6 +13,7 @@
   			<ol class="breadcrumb">
    				 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
    				 <li class="breadcrumb-item active" aria-current="page">Library</li>
+   				 
    			</ol>
   			
 		</nav>
@@ -33,7 +34,7 @@
 									<!-- кол-во комнат (один вариант выбора) -->
 									<div class="form-group">
 			    							<label for="exampleFormControlSelect2">Кол-во комнат</label>
-			    								<select class="form-control form-style" id="exampleFormControlSelect2">
+			    								<select class="form-control form-style" id="room_numbers">
 												     <option>1</option>
 												     <option>2</option>
 												     <option>3</option>
@@ -44,35 +45,32 @@
 						        	<!-- город (один выбор, поиск) -->
 						        	<div class="form-group">
 			    							<label for="exampleFormControlSelect2">Город</label>
-			    								<select class="form-control form-style" id="exampleFormControlSelect2">
-												     <option>1</option>
-												     <option>2</option>
-												     <option>3</option>
-												     <option>4</option>
-												     <option>5</option>
-			    								</select>
+			    							<input type="text" value="Брест" class="form-control form-style" id="city_input" list="city">
+			    								<datalist id="city">
+			    								    <option value="Брест"></option>
+			    								    <option value="Минск"></option>
+			    								    <option value="Москва"></option>
+			    								</datalist>
 									</div>
 						        	<!-- микрорайон (один вариант выбора) -->
 						        	<div class="form-group">
 			    							<label for="exampleFormControlSelect2">Микрорайон</label>
-			    								<select class="form-control form-style" id="exampleFormControlSelect2">
-												     <option>1</option>
-												     <option>2</option>
-												     <option>3</option>
-												     <option>4</option>
-												     <option>5</option>
-			    								</select>
+			    								<input type="text" class="form-control form-style" id="district_input" list="district">
+			    								<datalist id="district">
+			    								    <option value="Восток"></option>
+			    								    <option value="Вулька"></option>
+			    								    <option value="Кавалевка"></option>
+			    								</datalist>
 									</div>
 						        	<!-- улица (один вартиант, поиск) -->
 						        	<div class="form-group">
 			    							<label for="exampleFormControlSelect2">Улица</label>
-			    								<select class="form-control form-style" id="exampleFormControlSelect2">
-												     <option>1</option>
-												     <option>2</option>
-												     <option>3</option>
-												     <option>4</option>
-												     <option>5</option>
-			    								</select>
+			    								<input type="text" class="form-control form-style" id="street_input" list="street">
+			    								<datalist id="street">
+			    								    <option value="Карбышева"></option>
+			    								    <option value="Советская"></option>
+			    								    <option value="Киевская"></option>
+			    								</datalist>
 									</div>
 					       	</div>
 				        	<div class="columm2">
@@ -80,21 +78,51 @@
 						      	  	<div class="form-group">
 			    							<label for="exampleFormControlSelect2">Этаж квартиры</label>
 			    								<select class="form-control form-style" id="exampleFormControlSelect2">
-												     <option>1</option>
-												     <option>2</option>
-												     <option>3</option>
-												     <option>4</option>
-												     <option>5</option>
+												     <option value="">1</option>
+												     <option value="">2</option>
+												     <option value="">3</option>
+												     <option value="">4</option>
+												     <option value="">5</option>
+												     <option value="">6</option>
+												     <option value="">7</option>
+												     <option value="">8</option>
+												     <option value="">9</option>
+												     <option value="">10</option>
+												     <option value="">11</option>
+												     <option value="">12</option>
+												     <option value="">13</option>
+												     <option value="">14</option>
+												     <option value="">15</option>
+												     <option value="">16</option>
+												     <option value="">17</option>
+												     <option value="">18</option>
+												     <option value="">19</option>
+												     <option value="">20</option>    
 			    								</select>
 										</div>
 						        	<div class="form-group">
 			    							<label for="exampleFormControlSelect2">Этажность дома</label>
 			    								<select class="form-control form-style" id="exampleFormControlSelect2">
-												     <option>1</option>
-												     <option>2</option>
-												     <option>3</option>
-												     <option>4</option>
-												     <option>5</option>
+												     <option value="">1</option>
+												     <option value="">2</option>
+												     <option value="">3</option>
+												     <option value="">4</option>
+												     <option value="">5</option>
+												     <option value="">6</option>
+												     <option value="">7</option>
+												     <option value="">8</option>
+												     <option value="">9</option>
+												     <option value="">10</option>
+												     <option value="">11</option>
+												     <option value="">12</option>
+												     <option value="">13</option>
+												     <option value="">14</option>
+												     <option value="">15</option>
+												     <option value="">16</option>
+												     <option value="">17</option>
+												     <option value="">18</option>
+												     <option value="">19</option>
+												     <option value="">20</option> 
 			    								</select>
 										</div>
 						       		<div class="form-group">
@@ -354,5 +382,6 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    	<script src="js/flat.js"></script>
 	</body>
 </head>
