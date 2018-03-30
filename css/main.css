@@ -1,0 +1,130 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+/*CSS GRID основаная сетка макета страницы*/
+body {
+    font-family: 'Lato', sans-serif;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 200px minmax(500px, 3fr);
+    grid-template-rows: 60px 1fr auto;
+    grid-template-areas: "header nav"
+                          "main main"
+                         "footer footer";
+    grid-row-gap: 15px;
+}
+header {
+    grid-area:header;
+    border-bottom: 5px solid #bb0000;
+}
+nav {
+    grid-area: nav;
+    border-bottom: 5px solid #bb0000;
+    position: relative;
+}
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 10% minmax(600px, 1fr) 10%;
+    grid-template-areas: "left work right";
+    grid-gap: 15px;
+}
+footer {
+    grid-area:footer;
+    background-color: #1f487c;
+    color: white;
+    padding: 10px;
+}
+header div {
+    padding: 5% 5% 5% 5%;
+    text-align: center;
+}
+header, nav {
+    background-color: #1f487c;
+    color: white;
+    height: 100%;
+}
+header a{
+    color: white;
+}
+.left{grid-area:left;}
+.work{grid-area:work;}
+.right{grid-area:right;}
+
+/*Стиль меню навигации*/
+ul.nav-menu {
+    list-style: none;
+    margin-right: 20px;
+    margin-top: 31px;
+    float: right;
+}
+ul.nav-menu li {
+    display: inline;
+}
+ul.nav-menu li a {
+    color: #fefefe;
+    text-decoration: none;
+    background: #396588;
+    margin: 0;
+    padding: 10px 14px 10px 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+ul.nav-menu li a:hover {background-color: #bb0000;}
+ul.nav-menu li a.selected {background: #bb0000;}
+
+/*Стиль главного окна*/
+.hello{
+    background-color: #1f487c;
+    color: white;
+    border-radius: 10px;
+    margin: 10px 10px 10px 10px;
+    padding: 60px 30px 60px 30px;
+    text-align: justify;
+}
+.category {
+    margin: 10px 10px 10px 10px;
+    width: 100%;
+
+}
+.category div{
+    width:150px;
+    display:inline-block;
+    border-radius: 5px;
+    height:150px;
+    margin: 10px 10px 10px 10px;
+}
+.category div p {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 120px;
+    color: black;
+}
+div.flat{
+    background: url("../img/flat.png") #DCDCDC;
+    background-position: center ;
+    background-size: 80px 80px;
+    background-repeat: no-repeat ;
+}
+.house{
+    background: url("../img/house.png") #DCDCDC;
+    background-position: center ;
+    background-size: 80px 80px;
+    background-repeat: no-repeat ;
+}
+.dacha{
+     background: url("../img/dacha.png") #DCDCDC;
+     background-position: center ;
+     background-size: 80px 80px;
+     background-repeat: no-repeat ;
+ }
+.area{
+    background: url("../img/area.png") #DCDCDC;
+    background-position: center ;
+    background-size: 80px 80px;
+    background-repeat: no-repeat ;
+}
+.category div:hover{
+    background: url("../img/ok.png") #BB0000;
+    background-position: center ;
+    background-size: 80px 80px;
+    background-repeat: no-repeat ;
+}
