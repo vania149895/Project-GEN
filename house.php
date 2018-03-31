@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru" dir="ltr">
 
@@ -17,8 +16,8 @@
 <nav class="element element-2">
 
     <ul class="nav-menu">
-        <li><a href="flat.php" class="selected">Квартира</a></li>
-        <li><a href="house.php">Дом</a></li>
+        <li><a href="flat.php">Квартира</a></li>
+        <li><a href="house.php" class="selected">Дом</a></li>
         <li><a href="deteched_house.php">Дача</a></li>
         <li><a href="station.php">Участок</a></li>
     </ul>

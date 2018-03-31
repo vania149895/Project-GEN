@@ -17,9 +17,9 @@
 <nav class="element element-2">
 
     <ul class="nav-menu">
-        <li><a href="flat.php" class="selected">Квартира</a></li>
+        <li><a href="flat.php">Квартира</a></li>
         <li><a href="house.php">Дом</a></li>
-        <li><a href="deteched_house.php">Дача</a></li>
+        <li><a href="deteched_house.php"class="selected">Дача</a></li>
         <li><a href="station.php">Участок</a></li>
     </ul>
 </nav>

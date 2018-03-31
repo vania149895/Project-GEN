@@ -18,9 +18,9 @@
 
     <ul class="nav-menu">
         <li><a href="flat.php">Квартира</a></li>
-        <li><a href="#">Дом</a></li>
-        <li><a href="#">Дача</a></li>
-        <li><a href="#">Участок</a></li>
+        <li><a href="house.php">Дом</a></li>
+        <li><a href="deteched_house.php">Дача</a></li>
+        <li><a href="station.php">Участок</a></li>
     </ul>
 </nav>
 
@@ -35,15 +35,15 @@
         <table class="category" >
             <tr>
                 <td align="right">
-                    <a href="#"><div class="flat"><p>Квартира</p></div></a>
+                    <a href="flat.php"><div class="flat"><p>Квартира</p></div></a>
                 </td>
                 <td align="left">
-                    <a href="#"><div class="house"><p>Дом</p></div></a>
+                    <a href="house.php"><div class="house"><p>Дом</p></div></a>
                 </td>
             </tr>
             <tr>
                 <td align="right">
-                    <a href="#"><div class="dacha"><p>Дача</p></div></a>
+                    <a href="deteched_house.php"><div class="dacha"><p>Дача</p></div></a>
                 </td>
                 <td align="left">
                     <a href="#"><div class="area"><p>Участок</p></div></a>
