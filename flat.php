@@ -20,7 +20,7 @@
         <li><a href="flat.php" class="selected">Квартира</a></li>
         <li><a href="house.php">Дом</a></li>
         <li><a href="deteched_house.php">Дача</a></li>
-        <li><a href="station.php">Участок</a></li>
+        <li><a href="area.php">Участок</a></li>
     </ul>
 </nav>
 
@@ -29,16 +29,19 @@
     <div class="work">
         <div class="tabs">
             <input id="tab1" type="radio" name="tabs" checked>
-            <label for="tab1" title="Вкладка 1">Место</label>
+            <label for="tab1" title="Данные о расположении">Место</label>
 
             <input id="tab2" type="radio" name="tabs">
-            <label for="tab2" title="Вкладка 2">Общее</label>
+            <label for="tab2" title="Основные характеристики">Общее</label>
 
             <input id="tab3" type="radio" name="tabs">
-            <label for="tab3" title="Вкладка 3">Дополнительно</label>
+            <label for="tab3" title="Доп. сведения">Дополнительно</label>
 
             <input id="tab4" type="radio" name="tabs">
-            <label for="tab4" title="Вкладка 4">Креатив</label>
+            <label for="tab4" title="Улучшение ">Креатив</label>
+
+            <input id="tab5" type="radio" name="tabs">
+            <label for="tab5" title="Вкладка 5">Готово</label>
 
             <section id="content-tab1">
                 <p>
@@ -56,6 +59,11 @@
                 </p>
             </section>
             <section id="content-tab4">
+                <p>
+                    Здесь размещаете любое содержание....
+                </p>
+            </section>
+            <section id="content-tab5">
                 <p>
                     Здесь размещаете любое содержание....
                 </p>

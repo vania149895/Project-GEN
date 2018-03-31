@@ -19,7 +19,7 @@
         <li><a href="flat.php">Квартира</a></li>
         <li><a href="house.php" class="selected">Дом</a></li>
         <li><a href="deteched_house.php">Дача</a></li>
-        <li><a href="station.php">Участок</a></li>
+        <li><a href="area.php">Участок</a></li>
     </ul>
 </nav>
 

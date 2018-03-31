@@ -9,7 +9,7 @@ body {
     grid-template-areas: "header nav"
                           "main main"
                          "footer footer";
-    grid-row-gap: 15px;
+    grid-row-gap: 30px;
 }
 header {
     grid-area:header;
@@ -129,17 +129,14 @@ div.flat{
     background-repeat: no-repeat ;
 }
 
-/* Базовый контейнер табов */
+/* Базовый контейнер табов*/
 .tabs {
     min-width: 320px;
-    max-width: 800px;
-    padding: 0px;
-    margin: 0 auto;
 }
 /* Стили секций с содержанием */
 .tabs>section {
     display: none;
-    padding: 15px;
+    padding: 20px;
     background: #fff;
     border: 1px solid #ddd;
 }
@@ -155,23 +152,13 @@ div.flat{
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
 }
-/* Описываем анимацию свойства opacity */
 
+/* Описываем анимацию свойства opacity */
 @-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from {opacity: 0;} to {opacity: 1;}
 }
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from {opacity: 0;} to {opacity: 1;}
 }
 /* Прячем чекбоксы */
 .tabs>input {
@@ -182,35 +169,26 @@ div.flat{
 .tabs>label {
     display: inline-block;
     margin: 0 0 -1px;
-    padding: 15px 25px;
+    padding: 10px 20px;
     font-weight: 600;
     text-align: center;
     color: #aaa;
-    border: 0px solid #ddd;
-    border-width: 1px 1px 1px 1px;
+    border: 1px solid #ddd;
     background: #f1f1f1;
     border-radius: 3px 3px 0 0;
 }
-/* Шрифт-иконки от Font Awesome в формате Unicode */
+/* Прикручиваем иконки */
 .tabs>label:before {
-    font-family: fontawesome;
-    font-weight: normal;
+    font-weight: bolder;
     margin-right: 10px;
 }
-.tabs>label[for*="1"]:before {
-    content: "\f19a";
-}
-.tabs>label[for*="2"]:before {
-    content: "\f17a";
-}
-.tabs>label[for*="3"]:before {
-    content: "\f13b";
-}
-.tabs>label[for*="4"]:before {
-    content: "\f13c";
-}
-/* Изменения стиля переключателей вкладок при наведении */
+.tabs>label[for*="1"]:before {content: "1";}
+.tabs>label[for*="2"]:before {content: "2";}
+.tabs>label[for*="3"]:before {content: "3";}
+.tabs>label[for*="4"]:before {content: "4";}
+.tabs>label[for*="5"]:before {content: "5";}
 
+/* Изменения стиля переключателей вкладок при наведении */
 .tabs>label:hover {
     color: #888;
     cursor: pointer;
@@ -218,32 +196,23 @@ div.flat{
 /* Стили для активной вкладки */
 .tabs>input:checked+label {
     color: #555;
-    border-top: 1px solid #009933;
+    border-top: 2px solid #bb0000;
     border-bottom: 1px solid #fff;
     background: #fff;
 }
 /* Активация секций с помощью псевдокласса :checked */
-#tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4 {
+#tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4, #tab5:checked~#content-tab5 {
     display: block;
 }
-/* Убираем текст с переключателей
-* и оставляем иконки на малых экранах
-*/
 
-@media screen and (max-width: 800px) {
+/* Убираем текст с переключателей и оставляем иконки */
+
+@media screen and (max-width: 920px) {
     .tabs>label {
         font-size: 0;
     }
     .tabs>label:before {
         margin: 0;
         font-size: 18px;
-    }
-}
-/* Изменяем внутренние отступы
-*  переключателей для малых экранов
-*/
-@media screen and (max-width: 400px) {
-    .tabs>label {
-        padding: 15px;
     }
 }
