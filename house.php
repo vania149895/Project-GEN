@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru" dir="ltr">
 
@@ -17,52 +16,17 @@
 <nav class="element element-2">
 
     <ul class="nav-menu">
-        <li><a href="flat.php" class="selected">Квартира</a></li>
-        <li><a href="house.php">Дом</a></li>
+        <li><a href="flat.php">Квартира</a></li>
+        <li><a href="house.php" class="selected">Дом</a></li>
         <li><a href="deteched_house.php">Дача</a></li>
         <li><a href="station.php">Участок</a></li>
     </ul>
 </nav>
 
 <main class="element element-3">
-    <div class="left"></div>
-    <div class="work">
-        <div class="tabs">
-            <input id="tab1" type="radio" name="tabs" checked>
-            <label for="tab1" title="Вкладка 1">Место</label>
-
-            <input id="tab2" type="radio" name="tabs">
-            <label for="tab2" title="Вкладка 2">Общее</label>
-
-            <input id="tab3" type="radio" name="tabs">
-            <label for="tab3" title="Вкладка 3">Дополнительно</label>
-
-            <input id="tab4" type="radio" name="tabs">
-            <label for="tab4" title="Вкладка 4">Креатив</label>
-
-            <section id="content-tab1">
-                <p>
-                    Здесь размещаете любое содержание....
-                </p>
-            </section>
-            <section id="content-tab2">
-                <p>
-                    Здесь размещаете любое содержание....
-                </p>
-            </section>
-            <section id="content-tab3">
-                <p>
-                    Здесь размещаете любое содержание....
-                </p>
-            </section>
-            <section id="content-tab4">
-                <p>
-                    Здесь размещаете любое содержание....
-                </p>
-            </section>
-        </div>
-    </div>
-    <div class="right"></div>
+    <div class="left">Инст</div>
+    <div class="work">Интерфейс</div>
+    <div class="right">Доп</div>
 </main>
 
 <footer class="element element-4">
@@ -70,6 +34,34 @@
 </footer>
 
 <!--
+<div class="grid">
+    <div class="grid-item grid-item1">Item 1</div>
+    <div class="grid-item grid-item2">Item 2</div>
+    <div class="grid-item grid-item3">Item 3</div>
+</div>
+
+
+
+
+
+
+<nav>
+    <ul>
+        <li><a href="index_1.php">Project GEN (ver. 0.1)</a></li>
+        <li><a href="admin.php">ADMIN</a></li>
+    </ul>
+</nav>
+
+<nav aria-label="breadcrumb">
+    <p> Project GEN (ver.0.1)</p>
+
+    <ul class="breadcrumb">
+        <h6>Генератор текстов Ver. 0.1</h6>
+        <li class="breadcrumb-item active" aria-current="page">Главная</li>
+        <li>ВХОД ДЛЯ АДМИНА</li>
+
+    </ul>
+</nav>
 
 
 <div class="col-4">
