@@ -3,11 +3,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru" dir="ltr">
 
 <head>
+    <title>GEN | Квартира</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
     <link rel="stylesheet" type="text/css" href="css/main.css" >
     <style>* {margin: 0;padding: 0;} </style> <!--Сброс отступов всего документа-->
+    <?php include 'main.php' ?>
+</head>
+
 <body class="container">
 
 <header class="element element-1">
@@ -19,7 +22,7 @@
     <ul class="nav-menu">
         <li><a href="flat.php" class="selected">Квартира</a></li>
         <li><a href="house.php">Дом</a></li>
-        <li><a href="deteched_house.php">Дача</a></li>
+        <li><a href="dacha.php">Дача</a></li>
         <li><a href="area.php">Участок</a></li>
     </ul>
 </nav>
@@ -27,6 +30,7 @@
 <main class="element element-3">
     <div class="left"></div>
     <div class="work">
+        <h4 class="instruct">Что бы создать описание недвижимости, проследуйте простым указаниям.</h4>
         <div class="tabs">
             <input id="tab1" type="radio" name="tabs" checked>
             <label for="tab1" title="Данные о расположении">Место</label>
@@ -38,35 +42,40 @@
             <label for="tab3" title="Доп. сведения">Дополнительно</label>
 
             <input id="tab4" type="radio" name="tabs">
-            <label for="tab4" title="Улучшение ">Креатив</label>
+            <label for="tab4" title="Улучшение описания">Креатив</label>
 
             <input id="tab5" type="radio" name="tabs">
-            <label for="tab5" title="Вкладка 5">Готово</label>
+            <label for="tab5" title="Генерация описания">Готово</label>
 
             <section id="content-tab1">
-                <p>
-                    Здесь размещаете любое содержание....
-                </p>
+                <h2>Данные о местоположении недвижимости:</h2>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect2">Выберите город: </label>
+                    <input type="text" class="form-control form-style" id="city_input" list="city">
+                    <datalist id="city">
+                        <?php  getCity()?>
+                    </datalist>
+                </div>
+
+                <?php  getCity(document.getElementById('city_input').value)?>
+
+
             </section>
+
             <section id="content-tab2">
-                <p>
-                    Здесь размещаете любое содержание....
-                </p>
+                <h2>Общие сведения о недвижимости:</h2>
             </section>
+
             <section id="content-tab3">
-                <p>
-                    Здесь размещаете любое содержание....
-                </p>
+                <h2>Дополнительная информация о недвижимости:</h2>
             </section>
+
             <section id="content-tab4">
-                <p>
-                    Здесь размещаете любое содержание....
-                </p>
+                <h2>Креатив для улучшения уникальности описания:</h2>
             </section>
+
             <section id="content-tab5">
-                <p>
-                    Здесь размещаете любое содержание....
-                </p>
+                <h2>Нажмите кнопку для генирации описания:</h2>
             </section>
         </div>
     </div>
@@ -77,39 +86,6 @@
     Project GEN by Ivan Borusiuk 2018
 </footer>
 
-<!--
-
-
-<div class="col-4">
-    <div class="list-group" id="list-tab" role="tablist">
-        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Общие характеристики</a>
-        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Доп. по квартире</a>
-        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Доп по дому</a>
-        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Креатив</a>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="jumbotron">
-        <h1 class="display-4">Привет мой друг!</h1>
-        <p class="lead">Это программа была созданна специалльно для тебя, что бы ты смог создать прекрастное описания для своей недвижимости.</p>
-    </div>
-    <ul class="nav flex-column">
-        <li class="nav-item">
-            <a class="nav-link active" href="flat.html">Квартиры</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#">Дома</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#">Дачи</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#">Участки</a>
-        </li>
-    </ul>
-</div>
-<footer>Project GEN by Ivan Borusiuk 2018</footer>-->
 </body>
-</head>
+
+</html>

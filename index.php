@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/main.css" >
     <style>* {margin: 0;padding: 0;} </style> <!--Сброс отступов всего документа-->
+</head>
+
 <body class="container">
 
 <header class="element element-1">
@@ -19,7 +21,7 @@
     <ul class="nav-menu">
         <li><a href="flat.php">Квартира</a></li>
         <li><a href="house.php">Дом</a></li>
-        <li><a href="deteched_house.php">Дача</a></li>
+        <li><a href="dacha.php">Дача</a></li>
         <li><a href="area.php">Участок</a></li>
     </ul>
 </nav>
@@ -43,7 +45,7 @@
             </tr>
             <tr>
                 <td align="right">
-                    <a href="deteched_house.php"><div class="dacha"><p>Дача</p></div></a>
+                    <a href="dacha.php"><div class="dacha"><p>Дача</p></div></a>
                 </td>
                 <td align="left">
                     <a href="#"><div class="area"><p>Участок</p></div></a>
@@ -59,7 +61,5 @@
 </footer>
 
 </body>
-
-</head>
 
 </html>

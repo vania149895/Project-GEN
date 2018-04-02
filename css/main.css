@@ -129,6 +129,14 @@ div.flat{
     background-repeat: no-repeat ;
 }
 
+.instruct {
+    background-color: #1f487c;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px 30px 20px 30px;
+    text-align: justify;
+}
 /* Базовый контейнер табов*/
 .tabs {
     min-width: 320px;
@@ -139,6 +147,7 @@ div.flat{
     padding: 20px;
     background: #fff;
     border: 1px solid #ddd;
+    height: 58vh;
 }
 .tabs>section>p {
     margin: 0 0 5px;
@@ -176,6 +185,7 @@ div.flat{
     border: 1px solid #ddd;
     background: #f1f1f1;
     border-radius: 3px 3px 0 0;
+
 }
 /* Прикручиваем иконки */
 .tabs>label:before {
@@ -207,7 +217,7 @@ div.flat{
 
 /* Убираем текст с переключателей и оставляем иконки */
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 900px) {
     .tabs>label {
         font-size: 0;
     }
