@@ -48,7 +48,7 @@
                     <a href="dacha.php"><div class="dacha"><p>Дача</p></div></a>
                 </td>
                 <td align="left">
-                    <a href="#"><div class="area"><p>Участок</p></div></a>
+                    <a href="area.php"><div class="area"><p>Участок</p></div></a>
                 </td>
             </tr>
         </table>
