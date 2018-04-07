@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/main.css" >
-    <style>* {margin: 0;padding: 0;} </style> <!--Сброс отступов всего документа-->
+
 </head>
 
 <body class="container">

@@ -11,6 +11,10 @@ body {
                          "footer footer";
     grid-row-gap: 30px;
 }
+*{
+    margin: 0;
+    padding: 0;
+}
 header {
     grid-area:header;
     border-bottom: 5px solid #bb0000;

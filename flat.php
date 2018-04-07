@@ -7,8 +7,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/main.css" >
-    <style>* {margin: 0;padding: 0;} </style> <!--Сброс отступов всего документа-->
-    <?php include 'main.php' ?>
+    <script src="script.js"></script>
+    <?php include 'script/connect.php' ?>
+
 </head>
 
 <body class="container">
@@ -49,15 +50,21 @@
 
             <section id="content-tab1">
                 <h2>Данные о местоположении недвижимости:</h2>
-                <div class="form-group">
-                    <label for="exampleFormControlSelect2">Выберите город: </label>
-                    <input type="text" class="form-control form-style" id="city_input" list="city">
+                <div class="form">
+                    <label for="city_input">Выберите город: </label>
+                    <input type="text" id="city_input" list="city" onchange="load(this.value)" placeholder="Выберите город">
                     <datalist id="city">
-                        <?php  getCity()?>
+                        <?php include 'script/getCity.php' ?>
+                    </datalist>
+                </div>
+                <div class="form">
+                    <label for="district_input">Выберите район: </label>
+                    <input type="text" id="district_input" list="district">
+                    <datalist id="district">
+                        <option>ГОРОД НЕ ВЫБРАН</option>
                     </datalist>
                 </div>
 
-                <?php  getCity(document.getElementById('city_input').value)?>
 
 
             </section>
