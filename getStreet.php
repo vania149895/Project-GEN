@@ -1,8 +1,9 @@
 <?php
-$city = $_REQUEST["q"];
+$city = $_REQUEST["city"].$_REQUEST["district"];
+
 include 'connect.php';
 global $link;
-$query="SELECT ".$city." FROM city ORDER BY ".$city;
+$query="SELECT ".$city." FROM street ORDER BY ".$city;
 $result = mysqli_query($link, $query);
 
 if (mysqli_num_rows($result) > 0)
@@ -14,5 +15,5 @@ if (mysqli_num_rows($result) > 0)
 }
 else
 {
-    echo "<option value='--Город не найден--'></option>";
+    echo "<option value='--Район не найден--'></option>";
 }

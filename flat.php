@@ -5,21 +5,18 @@
 <head>
     <title>GEN | Квартира</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/main.css" >
     <script src="script.js"></script>
-    <?php include 'script/connect.php' ?>
-
+    <?php include 'connect.php' ?>
 </head>
 
 <body class="container">
 
-<header class="element element-1">
-    <div><a href="index.php">PROJECT GEN</a> <p>(ver. 0.1)</p></div>
+<header>
+    <div><a href="index.php">PROJECT GEN</a> <p>(ver. 0.3)</p></div>
 </header>
 
-<nav class="element element-2">
-
+<nav>
     <ul class="nav-menu">
         <li><a href="flat.php" class="selected">Квартира</a></li>
         <li><a href="house.php">Дом</a></li>
@@ -28,7 +25,7 @@
     </ul>
 </nav>
 
-<main class="element element-3">
+<main>
     <div class="left"></div>
     <div class="work">
         <h4 class="instruct">Что бы создать описание недвижимости, проследуйте простым указаниям.</h4>
@@ -49,48 +46,98 @@
             <label for="tab5" title="Генерация описания">Готово</label>
 
             <section id="content-tab1">
-                <h2>Данные о местоположении недвижимости:</h2>
-                <div class="form">
-                    <label for="city_input">Выберите город: </label>
-                    <input type="text" id="city_input" list="city" onchange="load(this.value)" placeholder="Выберите город">
-                    <datalist id="city">
-                        <?php include 'script/getCity.php' ?>
-                    </datalist>
+                <h2>Где распологается ваша недвижимость?</h2>
+                <div class="flex">
+                    <div class="form">
+                        <label for="city_input">Город: </label>
+                        <input id="city_input" list="city" onchange="loadDistrict(this.value)" placeholder="Выберите город">
+                        <datalist id="city">
+                            <?php include 'getCity.php' ?>
+                        </datalist>
+                    </div>
+                    <div class="form">
+                        <label for="district_input">Район: </label>
+                        <input id="district_input" list="district" onchange="loadStreet(this.value, window.city)" placeholder="Выберите район">
+                        <datalist id="district">
+                            <option>--ГОРОД НЕ ВЫБРАН--</option>
+                        </datalist>
+                    </div>
+                    <div class="form">
+                        <label for="street_input">Улица: </label>
+                        <input id="street_input" list="street" placeholder="Выберите улицу">
+                        <datalist id="street">
+                            <option>--РАЙОН НЕ ВЫБРАН--</option>
+                        </datalist>
+                    </div>
+                    <div class="form">
+                        <label for="number_input">Номер дома: </label>
+                        <input type="text" id="number_input" placeholder="Введите номер дома">
+                    </div>
                 </div>
-                <div class="form">
-                    <label for="district_input">Выберите район: </label>
-                    <input type="text" id="district_input" list="district">
-                    <datalist id="district">
-                        <option>ГОРОД НЕ ВЫБРАН</option>
-                    </datalist>
+                <h2>Что находится неподалеку?</h2>
+                <div class="flex">
+                    <div class="form">
+                        <u class="min">В 5-ти минутах ходьбы: </u>
+                        <?php include 'getNoFar.php' ?>
+                    </div>
+                    <div class="form">
+                        <u class="min">В 10-ти минутах ходьбы: </u>
+                        <?php include 'getNoFar.php' ?>
+                    </div>
+                    <div class="form">
+                        <u class="min">В 15-ти минутах ходьбы: </u>
+                        <?php include 'getNoFar.php' ?>
+                    </div>
                 </div>
-
-
-
+                <div class="flexButton">
+                    <label for="tab1" title="Основные характеристики" class="button">Назад</label>
+                    <label for="tab5" title="Генерация описания" class="button">Сгенерировать</label>
+                    <label for="tab2" title="Основные характеристики" class="button">Далее</label>
+                </div>
             </section>
 
             <section id="content-tab2">
                 <h2>Общие сведения о недвижимости:</h2>
+                <div class="flexButton">
+                    <label for="tab1" title="Местоположение" class="button">Назад</label>
+                    <label for="tab5" title="Генерация описания" class="button">Сгенерировать</label>
+                    <label for="tab3" title="Дополнительные сведения" class="button">Далее</label>
+                </div>
             </section>
 
             <section id="content-tab3">
                 <h2>Дополнительная информация о недвижимости:</h2>
+                <div class="flexButton">
+                    <label for="tab2" title="Основные характеристики" class="button">Назад</label>
+                    <label for="tab5" title="Генерация описания" class="button">Сгенерировать</label>
+                    <label for="tab4" title="Креатив" class="button">Далее</label>
+                </div>
             </section>
 
             <section id="content-tab4">
                 <h2>Креатив для улучшения уникальности описания:</h2>
+                <div class="flexButton">
+                    <label for="tab3" title="Дополнительные сведения" class="button">Назад</label>
+                    <label for="tab5" title="Генерация описания" class="button">Сгенерировать</label>
+                    <label for="tab5" title="Генерация описания" class="button">Далее</label>
+                </div>
             </section>
 
             <section id="content-tab5">
                 <h2>Нажмите кнопку для генирации описания:</h2>
+                <div class="flexButton">
+                    <label for="tab4" title="Креатив" class="button">Назад</label>
+                    <label for="tab5" title="Генерация описания" class="button">Сгенерировать</label>
+                    <label for="tab5" title="Генерация описания" class="button">Далее</label>
+                </div>
             </section>
         </div>
     </div>
     <div class="right"></div>
 </main>
 
-<footer class="element element-4">
-    Project GEN by Ivan Borusiuk 2018
+<footer>
+    Project GEN 2018
 </footer>
 
 </body>

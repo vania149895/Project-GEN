@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru" dir="ltr">
 
 <head>
-    <title>Генератор описаний ver.0.1</title>
+    <title>Генератор описаний</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/main.css" >
@@ -12,12 +12,11 @@
 
 <body class="container">
 
-<header class="element element-1">
-    <div><a href="index.php">PROJECT GEN</a> <p>(ver. 0.1)</p></div>
+<header>
+    <div><a href="index.php">PROJECT GEN</a> <p>(ver. 0.3)</p></div>
 </header>
 
-<nav class="element element-2">
-
+<nav>
     <ul class="nav-menu">
         <li><a href="flat.php">Квартира</a></li>
         <li><a href="house.php">Дом</a></li>
@@ -26,7 +25,7 @@
     </ul>
 </nav>
 
-<main class="element element-3">
+<main>
     <div class="left"></div>
     <div class="work">
         <div class="hello">
@@ -56,8 +55,8 @@
     <div class="right"></div>
 </main>
 
-<footer class="element element-4">
-    <p><a href="admin.php">Project GEN </a> by Ivan Borusiuk spesial for BUGREALT 2018</p>
+<footer>
+    <p><a href="admin.php">Project GEN </a> 2018</p>
 </footer>
 
 </body>

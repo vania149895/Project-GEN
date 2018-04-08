@@ -151,7 +151,7 @@ div.flat{
     padding: 20px;
     background: #fff;
     border: 1px solid #ddd;
-    height: 58vh;
+
 }
 .tabs>section>p {
     margin: 0 0 5px;
@@ -218,9 +218,7 @@ div.flat{
 #tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4, #tab5:checked~#content-tab5 {
     display: block;
 }
-
 /* Убираем текст с переключателей и оставляем иконки */
-
 @media screen and (max-width: 900px) {
     .tabs>label {
         font-size: 0;
@@ -229,4 +227,85 @@ div.flat{
         margin: 0;
         font-size: 18px;
     }
+}
+
+
+
+/* Базовые стили кнопки 3D */
+.button {
+    /* Относительное позиционирование */
+    position: relative;
+    /* Устанавливаем внутренние отступы */
+    padding: 12px 20px;
+    /* Убираем подчёркивание и выравниваем текст по центру */
+    text-decoration: none;
+    text-align: center;
+    /* Размер и начертание шрифта */
+    font-size: 20px;
+    font-weight: bold;
+    /* Эффект тени текста */
+    text-shadow: 1px 2px 2px #30698F;
+    /* Внешняя тень кнопки */
+    -webkit-box-shadow: 0px 9px 0px #3a7faa, 0px 9px 25px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 9px 0px #3a7faa, 0px 9px 25px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 9px 0px #3a7faa, 0px 9px 25px rgba(0, 0, 0, 0.7);
+    /* Цвет текста */
+    color: white;
+    /* Цвет фона кнопки */
+    background-color: #458ecc;
+    /* Скругляем углы */
+    border-radius: 8px;
+    /* Убираем рамку */
+    border: none;
+    outline: 0 none;
+    overflow: hidden;
+    /* Курсор ввиде руки */
+    cursor: pointer;
+}
+
+/* Стиль кнопки при нажатии */
+
+.button:active {
+    box-shadow: 0px 3px 0px #3a7faa, 0px 3px 6px rgba(0, 0, 0, 0.9);
+    top: 6px;
+}
+
+
+
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.flexButton{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 30px;
+
+}
+div.form{
+    width: 300px;
+    margin: 10px;
+}
+input{
+    margin-top:5px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+input[type=checkbox]{
+    margin-left: 25px;
+    margin-right: 15px;
+    width: 20px;
+    transform:scale(1.3);
+    opacity:0.9;
+    cursor:pointer;
+}
+.min{
+    font-size: 13pt;
 }
