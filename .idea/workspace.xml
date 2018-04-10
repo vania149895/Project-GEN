@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="605b8bd0-1533-4b41-bbd0-6608686d966a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/area.php" beforeDir="false" afterPath="$PROJECT_DIR$/area.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flat.php" beforeDir="false" afterPath="$PROJECT_DIR$/flat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,19 +30,16 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-414">
-              <caret line="256" selection-start-line="256" selection-end-line="256" />
+            <state relative-caret-position="-1599">
+              <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
               <folding>
                 <element signature="e#109#421#0" />
                 <element signature="e#423#457#0" />
-                <element signature="e#465#528#0" />
-                <element signature="e#533#618#0" />
                 <element signature="e#624#784#0" />
                 <element signature="e#792#885#0" />
                 <element signature="e#897#950#0" />
                 <element signature="e#963#1033#0" />
                 <element signature="e#1035#1056#0" />
-                <element signature="e#1166#1255#0" />
                 <element signature="e#1271#1295#0" />
                 <element signature="e#1313#1493#0" />
                 <element signature="e#1626#1795#0" />
@@ -56,6 +53,7 @@
                 <element signature="e#2775#2925#0" />
                 <element signature="e#2937#3098#0" />
                 <element signature="e#3134#3159#0" />
+                <element signature="e#3207#3316#0" />
                 <element signature="e#3333#3626#0" />
                 <element signature="e#3670#3739#0" />
                 <element signature="e#3740#3801#0" />
@@ -70,13 +68,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="flat.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="flat.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="610">
-              <caret line="133" column="26" lean-forward="true" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
+            <state relative-caret-position="358">
+              <caret line="119" column="59" lean-forward="true" selection-start-line="119" selection-start-column="59" selection-end-line="119" selection-end-column="59" />
               <folding>
                 <element signature="n#section#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#section#2;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#section#3;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -85,8 +85,8 @@
       <file leaf-file-name="house.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/house.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+            <state relative-caret-position="330">
+              <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
               <folding>
                 <element signature="n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#section#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
@@ -117,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+            <state relative-caret-position="546">
+              <caret line="50" column="40" lean-forward="true" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -158,12 +158,12 @@
         <option value="$PROJECT_DIR$/getStreet.php" />
         <option value="$PROJECT_DIR$/getCity.php" />
         <option value="$PROJECT_DIR$/getNoFar.php" />
-        <option value="$PROJECT_DIR$/script.js" />
         <option value="$PROJECT_DIR$/house.php" />
         <option value="$PROJECT_DIR$/dacha.php" />
         <option value="$PROJECT_DIR$/area.php" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/flat.php" />
+        <option value="$PROJECT_DIR$/script.js" />
       </list>
     </option>
   </component>
@@ -247,15 +247,15 @@
       <workItem from="1522261555366" duration="5061000" />
       <workItem from="1522399413459" duration="61220000" />
       <workItem from="1523089752622" duration="912000" />
-      <workItem from="1523110369938" duration="47605000" />
+      <workItem from="1523110369938" duration="53709000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114798000" />
+    <option name="totallyTimeSpent" value="120902000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="645" height="900" extended-state="6" />
+    <frame x="0" y="0" width="658" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -265,7 +265,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.2523585" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2139535" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20972644" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -313,14 +313,11 @@
           <folding>
             <element signature="e#109#421#0" />
             <element signature="e#423#457#0" />
-            <element signature="e#465#528#0" />
-            <element signature="e#533#618#0" />
             <element signature="e#624#784#0" />
             <element signature="e#792#885#0" />
             <element signature="e#897#950#0" />
             <element signature="e#963#1033#0" />
             <element signature="e#1035#1056#0" />
-            <element signature="e#1166#1255#0" />
             <element signature="e#1271#1295#0" />
             <element signature="e#1313#1493#0" />
             <element signature="e#1626#1795#0" />
@@ -334,6 +331,7 @@
             <element signature="e#2775#2925#0" />
             <element signature="e#2937#3098#0" />
             <element signature="e#3134#3159#0" />
+            <element signature="e#3207#3316#0" />
             <element signature="e#3333#3626#0" />
             <element signature="e#3670#3739#0" />
             <element signature="e#3740#3801#0" />
@@ -367,6 +365,8 @@
           <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
           <folding>
             <element signature="n#section#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#2;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#3;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -488,28 +488,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/getNoFar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="99" selection-start-line="6" selection-start-column="99" selection-end-line="6" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/house.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding>
-            <element signature="n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -531,21 +513,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/house.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+          <folding>
+            <element signature="n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="256" selection-start-line="256" selection-end-line="256" />
+        <state relative-caret-position="-1599">
+          <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
           <folding>
             <element signature="e#109#421#0" />
             <element signature="e#423#457#0" />
-            <element signature="e#465#528#0" />
-            <element signature="e#533#618#0" />
             <element signature="e#624#784#0" />
             <element signature="e#792#885#0" />
             <element signature="e#897#950#0" />
             <element signature="e#963#1033#0" />
             <element signature="e#1035#1056#0" />
-            <element signature="e#1166#1255#0" />
             <element signature="e#1271#1295#0" />
             <element signature="e#1313#1493#0" />
             <element signature="e#1626#1795#0" />
@@ -559,6 +549,7 @@
             <element signature="e#2775#2925#0" />
             <element signature="e#2937#3098#0" />
             <element signature="e#3134#3159#0" />
+            <element signature="e#3207#3316#0" />
             <element signature="e#3333#3626#0" />
             <element signature="e#3670#3739#0" />
             <element signature="e#3740#3801#0" />
@@ -574,11 +565,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/flat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="133" column="26" lean-forward="true" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
+        <state relative-caret-position="358">
+          <caret line="119" column="59" lean-forward="true" selection-start-line="119" selection-start-column="59" selection-end-line="119" selection-end-column="59" />
           <folding>
             <element signature="n#section#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#2;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#3;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="50" column="40" lean-forward="true" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
         </state>
       </provider>
     </entry>

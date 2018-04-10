@@ -100,6 +100,152 @@
                 <h2>Общие сведения о недвижимости:</h2>
                 <div class="flex">
                     <div class="form">
+                        <label for="wall">Материал стен:</label>
+                        <select id="wall">
+                            <option value="">--Тип стен--</option>
+                            <option value="Крипич">Кирпичные</option>
+                            <option value="Панель">Панельные</option>
+                            <option value="Дерево">Деревянные</option>
+                        </select>
+                    </div>
+                    <div class="form">
+                        <label for="year">Год постройки:</label>
+                        <input id="year" placeholder="Введите год постройки">
+                    </div>
+                    <div class="form">
+                        <label for="rooms">Количество комнат:</label>
+                        <select id="rooms" onchange="getRoomSquere(this.value)">
+                            <option value="">--Выберите кол-во комнат--</option>
+                            <option value="1">Однокомнатная</option>
+                            <option value="2">Двукомнатная</option>
+                            <option value="3">Трехкомнатная</option>
+                            <option value="4">Четырехкомнатная</option>
+                        </select>
+                    </div>
+                    <div class="form">
+                        <label for="level">Этаж/этажность:</label>
+                        <input id="level" placeholder="Введите этаж/этажность">
+                    </div>
+                    <div class="form">
+                        <label for="cupboard">Наличие кладовки:</label>
+                        <select id="cupboard">
+                            <option value="">--Кладовка--</option>
+                            <option value="1">Есть</option>
+                            <option value="2">Нет</option>
+                        </select>
+                    </div>
+                    <div class="form">
+                        <label for="lodgia">Наличие лоджии:</label>
+                        <select id="lodgia">
+                            <option value="">--Лоджия--</option>
+                            <option value="1">Нет</option>
+                            <option value="2">1 лоджия</option>
+                            <option value="3">2 лоджии</option>
+                        </select>
+                    </div>
+                    <div class="form">
+                        <label for="San">Санузел:</label>
+                        <select id="San">
+                            <option value="">--Тип санузла--</option>
+                            <option value="1">Раздельный</option>
+                            <option value="2">Совмещенный</option>
+                        </select>
+                    </div>
+                    <div class="form">
+                        <label for="repairs">Состояние ремонта:</label>
+                        <select id="repairs">
+                            <option value="">--Тип ремонта--</option>
+                            <option value="1">Очень плохой</option>
+                            <option value="2">Плохой</option>
+                            <option value="3">Средний</option>
+                            <option value="4">Хороший</option>
+                            <option value="5">Очень хороший</option>
+                        </select>
+                    </div>
+                    <div class="form">
+                        <label for="height">Высота потолков:</label>
+                        <input id="height" placeholder="Введитете высоту в м">
+                    </div>
+
+                </div>
+                <h2>Информация о площади:</h2>
+                <div class="flex">
+                    <div class="form">
+                        <label for="SquereSNB">Площадь по СНБ:</label>
+                        <input id="SquereSNB" placeholder="Введитете полощадь в м2">
+                    </div>
+                    <div class="form">
+                        <label for="liveSquere">Жилая площадь:</label>
+                        <input id="liveSquere" placeholder="Введитете полощадь в м2">
+                    </div>
+                    <div class="form">
+                        <label for="kitchenSquere">Площадь кухни:</label>
+                        <input id="kitchenSquere" placeholder="Введитете полощадь в м2">
+                    </div>
+
+
+
+
+
+                    <div class="form" id="1room">
+                        <label for="room1">Площадь 1-ой комнаты:</label>
+                        <input id="room1" placeholder="Введитете полощадь в м2">
+                    </div>
+                    <div class="form hiden" id="2room">
+                        <label for="room2">Площадь 2-ой комнаты:</label>
+                        <input id="room2" placeholder="Введитете полощадь в м2">
+                    </div>
+                    <div class="form hiden" id="3room">
+                        <label for="room3">Площадь 3-ей комнаты:</label>
+                        <input id="room3" placeholder="Введитете полощадь в м2">
+                    </div>
+                    <div class="form hiden" id="4room">
+                        <label for="room4">Площадь 4-ой комнаты:</label>
+                        <input id="room4" placeholder="Введитете полощадь в м2">
+                    </div>
+
+
+
+                    <div class="form">
+                        <label for="wcSq">Площадь cанузла:</label>
+                        <input id="wcSq" placeholder="Введитете полощадь в м2">
+                    </div>
+                    <div class="form hiden">
+                        <label for="closetSq">Площадь туалета:</label>
+                        <input id="closetSq" placeholder="Введитете полощадь в м2" >
+                    </div>
+                    <div class="form hiden">
+                        <label for="bathSq">Площадь ванной комнаты:</label>
+                        <input id="bathSq" placeholder="Введитете полощадь в м2">
+                    </div>
+
+
+
+                    <div class="form">
+                        <label for="hallSq">Площадь прихожей:</label>
+                        <input id="hallSq" placeholder="Введитете полощадь в м2">
+                    </div>
+
+                    <div class="form hiden">
+                        <label for="cupboardSq">Площадь кладовки:</label>
+                        <input id="cupboardSq" placeholder="Введитете полощадь в м2">
+                    </div>
+
+
+
+
+                </div>
+                <div class="flexButton">
+                    <label for="tab1" title="Местоположение" class="button">Назад</label>
+                    <label for="tab5" title="Генерация описания" class="button">Сгенерировать</label>
+                    <label for="tab3" title="Дополнительные сведения" class="button">Далее</label>
+                </div>
+            </section>
+
+            <section id="content-tab3">
+                <h2>Дополнительная информация о недвижимости:</h2>
+                <div class="flex">
+                    <div class="form">
                         <label for="rooms">Количество комнат:</label>
                         <select id="rooms">
                             <option value="">--Выберите кол-во комнат--</option>
@@ -133,30 +279,6 @@
                         </select>
                     </div>
                 </div>
-                <h2>Информация о площади:</h2>
-                <div class="flex">
-                    <div class="form">
-                        <label for="SquereSNB">Площадь по СНБ:</label>
-                        <input id="SquereSNB" placeholder="Введитете полощадь в м2">
-                    </div>
-                    <div class="form">
-                        <label for="liveSquere">Жилая площадь:</label>
-                        <input id="liveSquere" placeholder="Введитете полощадь в м2">
-                    </div>
-                    <div class="form">
-                        <label for="kitchenSquere">Площадь кухни:</label>
-                        <input id="kitchenSquere" placeholder="Введитете полощадь в м2">
-                    </div>
-                </div>
-                <div class="flexButton">
-                    <label for="tab1" title="Местоположение" class="button">Назад</label>
-                    <label for="tab5" title="Генерация описания" class="button">Сгенерировать</label>
-                    <label for="tab3" title="Дополнительные сведения" class="button">Далее</label>
-                </div>
-            </section>
-
-            <section id="content-tab3">
-                <h2>Дополнительная информация о недвижимости:</h2>
                 <div class="flexButton">
                     <label for="tab2" title="Основные характеристики" class="button">Назад</label>
                     <label for="tab5" title="Генерация описания" class="button">Сгенерировать</label>
