@@ -128,7 +128,7 @@
                     </div>
                     <div class="form">
                         <label for="cupboard">Наличие кладовки:</label>
-                        <select id="cupboard">
+                        <select id="cupboard" onchange="getCupboard(this.value)">
                             <option value="">--Кладовка--</option>
                             <option value="1">Есть</option>
                             <option value="2">Нет</option>
@@ -145,10 +145,10 @@
                     </div>
                     <div class="form">
                         <label for="San">Санузел:</label>
-                        <select id="San">
+                        <select id="San" onchange="getCloset(this.value)">
                             <option value="">--Тип санузла--</option>
-                            <option value="1">Раздельный</option>
-                            <option value="2">Совмещенный</option>
+                            <option value="1">Совмещенный</option>
+                            <option value="2">Раздельный</option>
                         </select>
                     </div>
                     <div class="form">
@@ -184,9 +184,6 @@
                     </div>
 
 
-
-
-
                     <div class="form" id="1room">
                         <label for="room1">Площадь 1-ой комнаты:</label>
                         <input id="room1" placeholder="Введитете полощадь в м2">
@@ -206,15 +203,15 @@
 
 
 
-                    <div class="form">
+                    <div class="form" id="sqWC">
                         <label for="wcSq">Площадь cанузла:</label>
                         <input id="wcSq" placeholder="Введитете полощадь в м2">
                     </div>
-                    <div class="form hiden">
+                    <div class="form hiden" id="sqCloset">
                         <label for="closetSq">Площадь туалета:</label>
                         <input id="closetSq" placeholder="Введитете полощадь в м2" >
                     </div>
-                    <div class="form hiden">
+                    <div class="form hiden" id="sqBath">
                         <label for="bathSq">Площадь ванной комнаты:</label>
                         <input id="bathSq" placeholder="Введитете полощадь в м2">
                     </div>
@@ -226,7 +223,7 @@
                         <input id="hallSq" placeholder="Введитете полощадь в м2">
                     </div>
 
-                    <div class="form hiden">
+                    <div class="form hiden" id="sqCupboard">
                         <label for="cupboardSq">Площадь кладовки:</label>
                         <input id="cupboardSq" placeholder="Введитете полощадь в м2">
                     </div>
@@ -297,6 +294,7 @@
 
             <section id="content-tab5">
                 <h2>Нажмите кнопку для генирации описания:</h2>
+                <textarea placeholder="Здесь сгенерируется идеальное и неповоторимое описание вашей недвижимости." ></textarea>
                 <div class="flexButton">
                     <label for="tab4" title="Креатив" class="button">Назад</label>
                     <label for="tab5" title="Генерация описания" class="button">Сгенерировать</label>

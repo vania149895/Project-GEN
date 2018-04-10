@@ -333,3 +333,17 @@ select{
 .hiden{
     display: none;
 }
+
+
+textarea{
+    resize: none;
+    width: 100%;
+    box-sizing: border-box;
+    height: 300px;
+    font-size: 14pt;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    margin-top:10px;
+
+}

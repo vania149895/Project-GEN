@@ -65,3 +65,38 @@ function getRoomSquere(room)
             break;
     }
 }
+function getCloset(closet)
+{
+    let rooms = closet;
+    let one = document.getElementById("sqWC");
+    let two = document.getElementById("sqCloset");
+    let three = document.getElementById("sqBath");
+    switch (rooms)
+    {
+        case "1":
+            one.classList.remove("hiden");
+            two.classList.add("hiden");
+            three.classList.add("hiden");
+            break;
+        case "2":
+            one.classList.add("hiden");
+            two.classList.remove("hiden");
+            three.classList.remove("hiden");
+            break;
+    }
+}
+
+function getCupboard(room)
+{
+    let rooms = room;
+    let one = document.getElementById("sqCupboard");
+    switch (rooms)
+    {
+        case "1":
+            one.classList.remove("hiden");
+            break;
+        case "2":
+            one.classList.add("hiden");
+            break;
+    }
+}
