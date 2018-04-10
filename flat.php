@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru" dir="ltr">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html" xml:lang="ru-ru" lang="ru-ru" dir="ltr">
 
 <head>
     <title>GEN | Квартира</title>
@@ -28,7 +28,7 @@
 <main>
     <div class="left"></div>
     <div class="work">
-        <h4 class="instruct">Что бы создать описание недвижимости, проследуйте простым указаниям.</h4>
+        <h4 class="instruct">Что бы создать описание квартиры, заполните все поля и нажмите кнопку сгенерировать.</h4>
         <div class="tabs">
             <input id="tab1" type="radio" name="tabs" checked>
             <label for="tab1" title="Данные о расположении">Место</label>
@@ -98,6 +98,56 @@
 
             <section id="content-tab2">
                 <h2>Общие сведения о недвижимости:</h2>
+                <div class="flex">
+                    <div class="form">
+                        <label for="rooms">Количество комнат:</label>
+                        <select id="rooms">
+                            <option value="">--Выберите кол-во комнат--</option>
+                            <option value="1">Однокомнатная</option>
+                            <option value="2">Двукомнатная</option>
+                            <option value="3">Трехкомнатная</option>
+                            <option value="4">Четырехкомнатная</option>
+                        </select>
+                    </div>
+                    <div class="form">
+                        <label for="level">Этаж/этажность:</label>
+                        <input id="level" placeholder="Введите этаж/этажность">
+                    </div>
+                    <div class="form">
+                        <label for="San">Санузел:</label>
+                        <select id="San">
+                            <option value="">--Тип санузла--</option>
+                            <option value="1">Раздельный</option>
+                            <option value="2">Совмещенный</option>
+                        </select>
+                    </div>
+                    <div class="form">
+                        <label for="repairs">Состояние ремонта:</label>
+                        <select id="repairs">
+                            <option value="">--Тип ремонта--</option>
+                            <option value="1">Очень плохой</option>
+                            <option value="2">Плохой</option>
+                            <option value="3">Средний</option>
+                            <option value="4">Хороший</option>
+                            <option value="5">Очень хороший</option>
+                        </select>
+                    </div>
+                </div>
+                <h2>Информация о площади:</h2>
+                <div class="flex">
+                    <div class="form">
+                        <label for="SquereSNB">Площадь по СНБ:</label>
+                        <input id="SquereSNB" placeholder="Введитете полощадь в м2">
+                    </div>
+                    <div class="form">
+                        <label for="liveSquere">Жилая площадь:</label>
+                        <input id="liveSquere" placeholder="Введитете полощадь в м2">
+                    </div>
+                    <div class="form">
+                        <label for="kitchenSquere">Площадь кухни:</label>
+                        <input id="kitchenSquere" placeholder="Введитете полощадь в м2">
+                    </div>
+                </div>
                 <div class="flexButton">
                     <label for="tab1" title="Местоположение" class="button">Назад</label>
                     <label for="tab5" title="Генерация описания" class="button">Сгенерировать</label>

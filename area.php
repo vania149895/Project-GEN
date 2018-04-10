@@ -10,7 +10,7 @@
 <body class="container">
 
 <header>
-    <div><a href="index.php">PROJECT GEN</a> <p>(ver. 0.1)</p></div>
+    <div><a href="index.php">PROJECT GEN</a> <p>(ver. 0.3)</p></div>
 </header>
 
 <nav>
@@ -95,6 +95,7 @@
 
             <section id="content-tab2">
                 <h2>Общие сведения о недвижимости:</h2>
+
                 <div class="flexButton">
                     <label for="tab1" title="Местоположение" class="button">Назад</label>
                     <label for="tab5" title="Генерация описания" class="button">Сгенерировать</label>
