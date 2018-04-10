@@ -189,7 +189,7 @@
 <footer>
     Project GEN 2018
 </footer>
-
+<script src="js/flat.js"></script>
 </body>
 
 </html>
