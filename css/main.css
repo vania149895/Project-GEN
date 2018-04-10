@@ -45,6 +45,7 @@ header, nav {
     background-color: #1f487c;
     color: white;
     height: 100%;
+
 }
 a{
     color: white;
@@ -246,9 +247,9 @@ div.flat{
     /* Эффект тени текста */
     text-shadow: 1px 2px 2px #30698F;
     /* Внешняя тень кнопки */
-    -webkit-box-shadow: 0px 9px 0px #3a7faa, 0px 9px 25px rgba(0, 0, 0, 0.7);
-    -moz-box-shadow: 0px 9px 0px #3a7faa, 0px 9px 25px rgba(0, 0, 0, 0.7);
-    box-shadow: 0px 9px 0px #3a7faa, 0px 9px 25px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0px 6px 0px #3a7faa, 0px 9px 25px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 6px 0px #3a7faa, 0px 9px 25px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 6px 0px #3a7faa, 0px 9px 25px rgba(0, 0, 0, 0.7);
     /* Цвет текста */
     color: white;
     /* Цвет фона кнопки */
@@ -267,7 +268,7 @@ div.flat{
 
 .button:active {
     box-shadow: 0px 3px 0px #3a7faa, 0px 3px 6px rgba(0, 0, 0, 0.9);
-    top: 6px;
+    top: 3px;
 }
 
 
@@ -286,9 +287,8 @@ div.flat{
 
 }
 div.form{
-    width: 300px;
+    width: 250px;
     margin: 10px;
-    display: inline-block;
 }
 input{
     margin-top:5px;
@@ -328,4 +328,8 @@ select{
 
 .min{
     font-size: 13pt;
+}
+
+.hiden{
+    display: none;
 }

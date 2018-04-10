@@ -29,3 +29,38 @@ function loadStreet(str,str1)
     document.getElementById("street_input").value = "";
     document.getElementById("number_input").value = "";
 }
+
+function getRoomSquere(room)
+{
+    let one = document.getElementById("1room");
+    let two = document.getElementById("2room");
+    let three = document.getElementById("3room");
+    let four = document.getElementById("4room");
+    switch (room)
+    {
+        case 1:
+            one.classList.remove("hiden");
+            two.classList.add("hiden");
+            three.classList.add("hiden");
+            four.classList.add("hiden");
+            break;
+        case 2:
+            one.classList.remove("hiden");
+            two.classList.remove("hiden");
+            three.classList.add("hiden");
+            four.classList.add("hiden");
+            break;
+        case 3:
+            one.classList.remove("hiden");
+            two.classList.remove("hiden");
+            three.classList.remove("hiden");
+            four.classList.add("hiden");
+            break;
+        case 4:
+            one.classList.remove("hiden");
+            two.classList.remove("hiden");
+            three.classList.remove("hiden");
+            four.classList.remove("hiden");
+            break;
+    }
+}
