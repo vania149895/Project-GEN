@@ -2,7 +2,7 @@
 $link = mysqli_connect("localhost:8889", "root", "root");
 if (!$link)
 {
-    echo "<script type='text/javascript'>alert('В настоящий момент сервер базы данных не доступен, поэтому корректное отображение страницы невозможно.');</script>";
+    echo "<script type='text/javascript'>console.info('В настоящий момент сервер базы данных не доступен, поэтому корректное отображение страницы невозможно.');</script>";
     exit();
 }
 $db=mysqli_select_db($link,"gen");
@@ -10,7 +10,7 @@ if(!$db)
 {
     if (mysqli_query($link, "CREATE DATABASE gen"))
     {
-        echo "<script type='text/javascript'>alert('Database created successfully');</script>";
+        echo "<script type='text/javascript'>console.info('Database created successfully');</script>";
     }
     else
     {
@@ -19,6 +19,6 @@ if(!$db)
 }
 else
 {
-    echo "<script type='text/javascript'>alert('База данных успешно подключена');</script>";
+    echo "<script type='text/javascript'>console.info('База данных успешно подключена');</script>";
 }
 ?>

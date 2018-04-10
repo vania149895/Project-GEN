@@ -33,7 +33,6 @@ function loadStreet(str,str1)
 function getRoomSquere(room)
 {
     let rooms = room;
-    console.log(room);
     let one = document.getElementById("1room");
     let two = document.getElementById("2room");
     let three = document.getElementById("3room");
