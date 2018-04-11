@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="605b8bd0-1533-4b41-bbd0-6608686d966a" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/script/getCreative.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/getHouse.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/area.php" beforeDir="false" afterPath="$PROJECT_DIR$/area.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/script/connect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dacha.php" beforeDir="false" afterPath="$PROJECT_DIR$/dacha.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flat.php" beforeDir="false" afterPath="$PROJECT_DIR$/flat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getCity.php" beforeDir="false" afterPath="$PROJECT_DIR$/script/getCity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getDistrict.php" beforeDir="false" afterPath="$PROJECT_DIR$/script/getDistrict.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getNoFar.php" beforeDir="false" afterPath="$PROJECT_DIR$/script/getNoFar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getStreet.php" beforeDir="false" afterPath="$PROJECT_DIR$/script/getStreet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house.php" beforeDir="false" afterPath="$PROJECT_DIR$/house.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/script.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,26 +29,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="area.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/area.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1455">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="342" column="19" selection-start-line="342" selection-start-column="19" selection-end-line="342" selection-end-column="19" />
+            <state relative-caret-position="329">
+              <caret line="309" column="23" selection-start-line="309" selection-start-column="23" selection-end-line="309" selection-end-column="23" />
               <folding>
                 <element signature="e#109#421#0" />
                 <element signature="e#423#457#0" />
+                <element signature="e#465#528#0" />
+                <element signature="e#533#618#0" />
                 <element signature="e#624#784#0" />
                 <element signature="e#792#885#0" />
                 <element signature="e#897#950#0" />
+                <element signature="e#963#1034#0" />
+                <element signature="e#1036#1057#0" />
+                <element signature="e#1167#1256#0" />
+                <element signature="e#1272#1296#0" />
+                <element signature="e#1314#1494#0" />
+                <element signature="e#1627#1796#0" />
+                <element signature="e#1807#1861#0" />
+                <element signature="e#1875#1996#0" />
+                <element signature="e#2013#2112#0" />
+                <element signature="e#2121#2273#0" />
+                <element signature="e#2280#2433#0" />
+                <element signature="e#2440#2598#0" />
+                <element signature="e#2604#2756#0" />
+                <element signature="e#2776#2926#0" />
+                <element signature="e#2938#3099#0" />
+                <element signature="e#3135#3160#0" />
+                <element signature="e#3208#3300#0" />
+                <element signature="e#3317#3610#0" />
+                <element signature="e#3654#3723#0" />
+                <element signature="e#3724#3785#0" />
+                <element signature="e#3820#3866#0" />
+                <element signature="e#3922#4147#0" />
+                <element signature="e#4193#4245#0" />
+                <element signature="e#4549#4590#0" />
+                <element signature="e#4650#4762#0" />
+                <element signature="e#4962#4985#0" />
+                <element signature="e#5042#5203#0" />
               </folding>
             </state>
           </provider>
@@ -47,40 +77,38 @@
       <file leaf-file-name="flat.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="296" column="61" selection-start-line="296" selection-start-column="61" selection-end-line="296" selection-end-column="61" />
+            <state relative-caret-position="55">
+              <caret line="134" column="51" lean-forward="true" selection-start-line="134" selection-start-column="51" selection-end-line="134" selection-end-column="51" />
               <folding>
                 <element signature="n#section#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#section#1;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#section#2;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="house.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/house.php">
+      <file leaf-file-name="flat.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/flat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+            <state relative-caret-position="60">
+              <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dacha.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dacha.php">
+      <file leaf-file-name="getNoFar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script/getNoFar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+            <state relative-caret-position="165">
+              <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/script.js">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/script/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="98" column="39" selection-start-line="98" selection-start-column="39" selection-end-line="98" selection-end-column="39" />
+            <state relative-caret-position="534">
+              <caret line="102" column="41" lean-forward="true" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -110,7 +138,6 @@
         <option value="$PROJECT_DIR$/script/connect.php" />
         <option value="$PROJECT_DIR$/main.php" />
         <option value="$PROJECT_DIR$/script/getCity.php" />
-        <option value="$PROJECT_DIR$/script/script.js" />
         <option value="$PROJECT_DIR$/script/getDistrict.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/getDistrict.php" />
@@ -120,9 +147,12 @@
         <option value="$PROJECT_DIR$/house.php" />
         <option value="$PROJECT_DIR$/dacha.php" />
         <option value="$PROJECT_DIR$/area.php" />
+        <option value="$PROJECT_DIR$/getCreative.php" />
+        <option value="$PROJECT_DIR$/getHouse.php" />
+        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/script.js" />
         <option value="$PROJECT_DIR$/flat.php" />
-        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/script/script.js" />
       </list>
     </option>
   </component>
@@ -161,6 +191,11 @@
               <item name="Project GEN" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="Project GEN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project GEN" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="script" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -177,8 +212,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/" />
       <recent name="$PROJECT_DIR$/script" />
+      <recent name="$PROJECT_DIR$/" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -207,15 +242,15 @@
       <workItem from="1522399413459" duration="61220000" />
       <workItem from="1523089752622" duration="912000" />
       <workItem from="1523110369938" duration="53709000" />
-      <workItem from="1523358349750" duration="1033000" />
+      <workItem from="1523358349750" duration="11104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121943000" />
+    <option name="totallyTimeSpent" value="132014000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="740" height="900" extended-state="6" />
+    <frame x="0" y="0" width="809" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -225,7 +260,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.2523585" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18648648" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17058097" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -248,12 +283,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$USER_HOME$/Desktop/Gtext (2).html" />
     <entry file="file://$USER_HOME$/Desktop/source/index.php" />
     <entry file="file://$PROJECT_DIR$/js/flat.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -262,7 +295,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connect.php">
+    <entry file="file://$PROJECT_DIR$/script/connect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
@@ -277,28 +310,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getCity.php">
+    <entry file="file://$PROJECT_DIR$/script/getCity.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="11" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getDistrict.php">
+    <entry file="file://$PROJECT_DIR$/script/getDistrict.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getStreet.php">
+    <entry file="file://$PROJECT_DIR$/script/getStreet.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getNoFar.php">
+    <entry file="file://$PROJECT_DIR$/script/getNoFar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="99" selection-start-line="6" selection-start-column="99" selection-end-line="6" selection-end-column="99" />
@@ -333,14 +366,43 @@
           <folding>
             <element signature="e#109#421#0" />
             <element signature="e#423#457#0" />
+            <element signature="e#465#528#0" />
+            <element signature="e#533#618#0" />
             <element signature="e#624#784#0" />
             <element signature="e#792#885#0" />
             <element signature="e#897#950#0" />
+            <element signature="e#963#1034#0" />
+            <element signature="e#1036#1057#0" />
+            <element signature="e#1167#1256#0" />
+            <element signature="e#1272#1296#0" />
+            <element signature="e#1314#1494#0" />
+            <element signature="e#1627#1796#0" />
+            <element signature="e#1807#1861#0" />
+            <element signature="e#1875#1996#0" />
+            <element signature="e#2013#2112#0" />
+            <element signature="e#2121#2273#0" />
+            <element signature="e#2280#2433#0" />
+            <element signature="e#2440#2598#0" />
+            <element signature="e#2604#2756#0" />
+            <element signature="e#2776#2926#0" />
+            <element signature="e#2938#3099#0" />
+            <element signature="e#3135#3160#0" />
+            <element signature="e#3208#3300#0" />
+            <element signature="e#3317#3610#0" />
+            <element signature="e#3654#3723#0" />
+            <element signature="e#3724#3785#0" />
+            <element signature="e#3820#3866#0" />
+            <element signature="e#3922#4147#0" />
+            <element signature="e#4193#4245#0" />
+            <element signature="e#4549#4590#0" />
+            <element signature="e#4650#4762#0" />
+            <element signature="e#4962#4985#0" />
+            <element signature="e#5042#5203#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script.js">
+    <entry file="file://$PROJECT_DIR$/script/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
@@ -353,8 +415,6 @@
           <caret line="111" selection-start-line="111" selection-end-line="112" />
           <folding>
             <element signature="n#section#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#1;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#2;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -380,9 +440,38 @@
           <folding>
             <element signature="e#109#421#0" />
             <element signature="e#423#457#0" />
+            <element signature="e#465#528#0" />
+            <element signature="e#533#618#0" />
             <element signature="e#624#784#0" />
             <element signature="e#792#885#0" />
             <element signature="e#897#950#0" />
+            <element signature="e#963#1034#0" />
+            <element signature="e#1036#1057#0" />
+            <element signature="e#1167#1256#0" />
+            <element signature="e#1272#1296#0" />
+            <element signature="e#1314#1494#0" />
+            <element signature="e#1627#1796#0" />
+            <element signature="e#1807#1861#0" />
+            <element signature="e#1875#1996#0" />
+            <element signature="e#2013#2112#0" />
+            <element signature="e#2121#2273#0" />
+            <element signature="e#2280#2433#0" />
+            <element signature="e#2440#2598#0" />
+            <element signature="e#2604#2756#0" />
+            <element signature="e#2776#2926#0" />
+            <element signature="e#2938#3099#0" />
+            <element signature="e#3135#3160#0" />
+            <element signature="e#3208#3300#0" />
+            <element signature="e#3317#3610#0" />
+            <element signature="e#3654#3723#0" />
+            <element signature="e#3724#3785#0" />
+            <element signature="e#3820#3866#0" />
+            <element signature="e#3922#4147#0" />
+            <element signature="e#4193#4245#0" />
+            <element signature="e#4549#4590#0" />
+            <element signature="e#4650#4762#0" />
+            <element signature="e#4962#4985#0" />
+            <element signature="e#5042#5203#0" />
           </folding>
         </state>
       </provider>
@@ -401,8 +490,6 @@
           <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
           <folding>
             <element signature="n#section#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#1;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#2;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -457,14 +544,7 @@
     <entry file="file://$PROJECT_DIR$/index.html" />
     <entry file="file://$USER_HOME$/Desktop/Gtext (2).html" />
     <entry file="file://$USER_HOME$/Desktop/source/index.php" />
-    <entry file="file://$PROJECT_DIR$/js/flat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connect.php">
+    <entry file="file://$PROJECT_DIR$/script/connect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
@@ -479,31 +559,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getCity.php">
+    <entry file="file://$PROJECT_DIR$/script/getCity.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="11" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getDistrict.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getStreet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getNoFar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="99" selection-start-line="6" selection-start-column="99" selection-end-line="6" selection-end-column="99" />
         </state>
       </provider>
     </entry>
@@ -514,13 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/house.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dacha.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -528,36 +580,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flat.php">
+    <entry file="file://$PROJECT_DIR$/house.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="296" column="61" selection-start-line="296" selection-start-column="61" selection-end-line="296" selection-end-column="61" />
-          <folding>
-            <element signature="n#section#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#1;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#2;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="98" column="39" selection-start-line="98" selection-start-column="39" selection-end-line="98" selection-end-column="39" />
+        <state relative-caret-position="330">
+          <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="342" column="19" selection-start-line="342" selection-start-column="19" selection-end-line="342" selection-end-column="19" />
+        <state relative-caret-position="329">
+          <caret line="309" column="23" selection-start-line="309" selection-start-column="23" selection-end-line="309" selection-end-column="23" />
           <folding>
             <element signature="e#109#421#0" />
             <element signature="e#423#457#0" />
+            <element signature="e#465#528#0" />
+            <element signature="e#533#618#0" />
             <element signature="e#624#784#0" />
             <element signature="e#792#885#0" />
             <element signature="e#897#950#0" />
+            <element signature="e#963#1034#0" />
+            <element signature="e#1036#1057#0" />
+            <element signature="e#1167#1256#0" />
+            <element signature="e#1272#1296#0" />
+            <element signature="e#1314#1494#0" />
+            <element signature="e#1627#1796#0" />
+            <element signature="e#1807#1861#0" />
+            <element signature="e#1875#1996#0" />
+            <element signature="e#2013#2112#0" />
+            <element signature="e#2121#2273#0" />
+            <element signature="e#2280#2433#0" />
+            <element signature="e#2440#2598#0" />
+            <element signature="e#2604#2756#0" />
+            <element signature="e#2776#2926#0" />
+            <element signature="e#2938#3099#0" />
+            <element signature="e#3135#3160#0" />
+            <element signature="e#3208#3300#0" />
+            <element signature="e#3317#3610#0" />
+            <element signature="e#3654#3723#0" />
+            <element signature="e#3724#3785#0" />
+            <element signature="e#3820#3866#0" />
+            <element signature="e#3922#4147#0" />
+            <element signature="e#4193#4245#0" />
+            <element signature="e#4549#4590#0" />
+            <element signature="e#4650#4762#0" />
+            <element signature="e#4962#4985#0" />
+            <element signature="e#5042#5203#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/getDistrict.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/getHouse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/getStreet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="45" lean-forward="true" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/getCreative.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="93" selection-start-line="6" selection-start-column="93" selection-end-line="6" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="134" column="51" lean-forward="true" selection-start-line="134" selection-start-column="51" selection-end-line="134" selection-end-column="51" />
+          <folding>
+            <element signature="n#section#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/getNoFar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/flat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="102" column="41" lean-forward="true" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
         </state>
       </provider>
     </entry>

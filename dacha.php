@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/main.css" >
-    <script src="script.js"></script>
+    <script src="script/script.js"></script>
     <?php include 'connect.php' ?>
 </head>
 <body class="container">

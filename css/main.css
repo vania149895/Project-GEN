@@ -3,6 +3,7 @@
 body {
     font-family: 'Lato', sans-serif;
     display: grid;
+    width: 100%;
     height: 100vh;
     grid-template-columns: 200px minmax(420px, 3fr);
     grid-template-rows: 60px 1fr auto;
@@ -10,6 +11,7 @@ body {
                           "main main"
                          "footer footer";
     grid-row-gap: 30px;
+
 }
 *{
     margin: 0;
@@ -17,11 +19,11 @@ body {
 }
 header {
     grid-area:header;
-    border-bottom: 5px solid #bb0000;
+    border-bottom: 5px solid orange;
 }
 nav {
     grid-area: nav;
-    border-bottom: 5px solid #bb0000;
+    border-bottom: 5px solid orange;
     position: relative;
 }
 main {
@@ -72,9 +74,10 @@ ul.nav-menu li a {
     padding: 10px 14px 10px 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
+    text-shadow: 1px 2px 2px #30698F;
 }
-ul.nav-menu li a:hover {background-color: #bb0000;}
-ul.nav-menu li a.selected {background: #bb0000;}
+ul.nav-menu li a:hover {background: orange;}
+ul.nav-menu li a.selected {background: orange;}
 
 /*Стиль главного окна*/
 .hello{
@@ -128,7 +131,7 @@ div.flat{
     background-repeat: no-repeat ;
 }
 .category div:hover{
-    background: url("../img/ok.png") #BB0000;
+    background: url("../img/ok.png") orange;
     background-position: center ;
     background-size: 80px 80px;
     background-repeat: no-repeat ;
@@ -211,7 +214,7 @@ div.flat{
 /* Стили для активной вкладки */
 .tabs>input:checked+label {
     color: #555;
-    border-top: 2px solid #bb0000;
+    border-top: 2px solid orange;
     border-bottom: 1px solid #fff;
     background: #fff;
 }
@@ -290,6 +293,10 @@ div.form{
     width: 250px;
     margin: 10px;
 }
+div.form1{
+    width: 400px;
+    margin: 10px;
+}
 input{
     margin-top:5px;
     padding: 12px 20px;
@@ -298,6 +305,9 @@ input{
     width: 100%;
     box-sizing: border-box;
     font-size: 14px;
+}
+input:disabled{
+    background: #dddddd;
 }
 input[type=checkbox]{
     margin-left: 25px;

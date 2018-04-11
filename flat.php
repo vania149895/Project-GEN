@@ -6,8 +6,8 @@
     <title>GEN | Квартира</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/main.css" >
-    <script src="script.js"></script>
-    <?php include 'connect.php' ?>
+    <script src="script/script.js"></script>
+    <?php include 'script/connect.php' ?>
 </head>
 
 <body class="container">
@@ -52,41 +52,44 @@
                         <label for="city_input">Город: </label>
                         <input id="city_input" list="city" onchange="loadDistrict(this.value)" placeholder="Выберите город">
                         <datalist id="city">
-                            <?php include 'getCity.php' ?>
+                            <?php include 'script/getCity.php' ?>
                         </datalist>
                     </div>
                     <div class="form">
                         <label for="district_input">Район: </label>
-                        <input id="district_input" list="district" onchange="loadStreet(this.value, window.city)" placeholder="Выберите район">
+                        <input id="district_input" list="district" onchange="loadStreet(this.value, window.city)" placeholder="Выберите район" disabled>
                         <datalist id="district">
                             <option>--ГОРОД НЕ ВЫБРАН--</option>
                         </datalist>
                     </div>
                     <div class="form">
                         <label for="street_input">Улица: </label>
-                        <input id="street_input" list="street" placeholder="Выберите улицу">
+                        <input id="street_input" list="street" onchange="loadHouse(this.value, window.district, window.city)" placeholder="Выберите улицу" disabled>
                         <datalist id="street">
                             <option>--РАЙОН НЕ ВЫБРАН--</option>
                         </datalist>
                     </div>
                     <div class="form">
                         <label for="number_input">Номер дома: </label>
-                        <input type="text" id="number_input" placeholder="Введите номер дома">
+                        <input type="text" id="number_input" list="house" placeholder="Введите номер дома" disabled>
+                        <datalist id="house">
+                            <option>--УЛИЦА НЕ ВЫБРАНА--</option>
+                        </datalist>
                     </div>
                 </div>
                 <h2>Что находится неподалеку?</h2>
                 <div class="flex">
                     <div class="form">
                         <u class="min">В 5-ти минутах ходьбы: </u>
-                        <?php include 'getNoFar.php' ?>
+                        <?php include 'script/getNoFar.php' ?>
                     </div>
                     <div class="form">
                         <u class="min">В 10-ти минутах ходьбы: </u>
-                        <?php include 'getNoFar.php' ?>
+                        <?php include 'script/getNoFar.php' ?>
                     </div>
                     <div class="form">
                         <u class="min">В 15-ти минутах ходьбы: </u>
-                        <?php include 'getNoFar.php' ?>
+                        <?php include 'script/getNoFar.php' ?>
                     </div>
                 </div>
                 <div class="flexButton">
@@ -285,6 +288,11 @@
 
             <section id="content-tab4">
                 <h2>Креатив для улучшения уникальности описания:</h2>
+                <div class="flex">
+                    <div class="form1">
+                        <?php include 'script/getCreative.php' ?>
+                    </div>
+                </div>
                 <div class="flexButton">
                     <label for="tab3" title="Дополнительные сведения" class="button">Назад</label>
                     <label for="tab5" onclick="result()" title="Генерация описания" class="button">Сгенерировать</label>
