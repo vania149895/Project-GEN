@@ -49,7 +49,7 @@ function result(){
     let lodgia = document.getElementById("lodgia").value;
     let bathroom = !!document.getElementById("San").value ? document.getElementById("San").value + "санузел. " : "";
     let repair = document.getElementById("repairs").value;
-    let height = !!document.getElementById("height").value ? "Высота потолков : " + document.getElementById("height").value + " м.";
+    let height = !!document.getElementById("height").value ? "Высота потолков : " + document.getElementById("height").value + " м." : "";
     let SquereSNB = !!document.getElementById("SquereSNB").value ? "Площадь кваритры составляет: " + document.getElementById("SquereSNB").value + " кв. м. " : "";
     let liveSquere = !!document.getElementById("liveSquere").value ? "Жилая площадь: " + document.getElementById("liveSquere").value + " кв. м. " : "";
     let kitchenSquere = !!document.getElementById("kitchenSquere").value? "Площадь кухни: " + document.getElementById("kitchenSquere").value + " кв. м. " : "";
@@ -62,6 +62,6 @@ function result(){
     let TextArea = document.getElementById("gen_text");
     TextArea.value = room(n_of_rooms) + " в городе " + getCity(city) + " расположенная в районе " + district + 
         ", " + street+" " + n_of_build + ". " + floor_and_type(floor_of_floors,type_of_walls+"ного") + ", " + 
-        year_of_found + "-ого года постройки. " + SquereSNB + liveSquere  + Squere_of_rooms(roomsSquere) +
+        year_of_found + "-ого года постройки. " + SquereSNB + liveSquere + Squere_of_rooms(roomsSquere) +
         kitchenSquere + wcSq + closetSq + bathroom + bathSq + hallSq + cupboardSq + height;
 }
