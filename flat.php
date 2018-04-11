@@ -43,7 +43,7 @@
             <label for="tab4" title="Улучшение описания">Креатив</label>
 
             <input id="tab5" type="radio" name="tabs">
-            <label for="tab5" title="Генерация описания">Готово</label>
+            <label for="tab5" onclick="result()" title="Генерация описания">Готово</label>
 
             <section id="content-tab1">
                 <h2>Где распологается ваша недвижимость?</h2>
@@ -91,7 +91,7 @@
                 </div>
                 <div class="flexButton">
                     <label for="tab1" title="Основные характеристики" class="button">Назад</label>
-                    <label for="tab5" title="Генерация описания" class="button">Сгенерировать</label>
+                    <label for="tab5" onclick="result()" title="Генерация описания" class="button">Сгенерировать</label>
                     <label for="tab2" title="Основные характеристики" class="button">Далее</label>
                 </div>
             </section>
@@ -103,9 +103,9 @@
                         <label for="wall">Материал стен:</label>
                         <select id="wall">
                             <option value="">--Тип стен--</option>
-                            <option value="Крипич">Кирпичные</option>
-                            <option value="Панель">Панельные</option>
-                            <option value="Дерево">Деревянные</option>
+                            <option value="крипич">Кирпичные</option>
+                            <option value="панель">Панельные</option>
+                            <option value="дерево">Деревянные</option>
                         </select>
                     </div>
                     <div class="form">
@@ -147,8 +147,8 @@
                         <label for="San">Санузел:</label>
                         <select id="San" onchange="getCloset(this.value)">
                             <option value="">--Тип санузла--</option>
-                            <option value="1">Совмещенный</option>
-                            <option value="2">Раздельный</option>
+                            <option value="совмещенный">Совмещенный</option>
+                            <option value="раздельный">Раздельный</option>
                         </select>
                     </div>
                     <div class="form">
@@ -234,7 +234,7 @@
                 </div>
                 <div class="flexButton">
                     <label for="tab1" title="Местоположение" class="button">Назад</label>
-                    <label for="tab5" title="Генерация описания" class="button">Сгенерировать</label>
+                    <label for="tab5" onclick="result()" title="Генерация описания" class="button">Сгенерировать</label>
                     <label for="tab3" title="Дополнительные сведения" class="button">Далее</label>
                 </div>
             </section>
@@ -278,7 +278,7 @@
                 </div>
                 <div class="flexButton">
                     <label for="tab2" title="Основные характеристики" class="button">Назад</label>
-                    <label for="tab5" title="Генерация описания" class="button">Сгенерировать</label>
+                    <label for="tab5" onclick="result()" title="Генерация описания" class="button">Сгенерировать</label>
                     <label for="tab4" title="Креатив" class="button">Далее</label>
                 </div>
             </section>
@@ -287,18 +287,18 @@
                 <h2>Креатив для улучшения уникальности описания:</h2>
                 <div class="flexButton">
                     <label for="tab3" title="Дополнительные сведения" class="button">Назад</label>
-                    <label for="tab5" title="Генерация описания" class="button">Сгенерировать</label>
-                    <label for="tab5" title="Генерация описания" class="button">Далее</label>
+                    <label for="tab5" onclick="result()" title="Генерация описания" class="button">Сгенерировать</label>
+                    <label for="tab5" onclick="result()" title="Генерация описания" class="button">Далее</label>
                 </div>
             </section>
 
             <section id="content-tab5">
                 <h2>Нажмите кнопку для генирации описания:</h2>
-                <textarea placeholder="Здесь сгенерируется идеальное и неповоторимое описание вашей недвижимости." ></textarea>
+                <textarea placeholder="Здесь сгенерируется идеальное и неповоторимое описание вашей недвижимости." id="gen_text"></textarea>
                 <div class="flexButton">
                     <label for="tab4" title="Креатив" class="button">Назад</label>
-                    <label for="tab5" title="Генерация описания" class="button">Сгенерировать</label>
-                    <label for="tab5" title="Генерация описания" class="button">Далее</label>
+                    <label for="tab5" onclick="result()" title="Генерация описания" class="button">Сгенерировать</label>
+                    <label for="tab5" onclick="result()" title="Генерация описания" class="button">Далее</label>
                 </div>
             </section>
         </div>
