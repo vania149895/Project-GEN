@@ -7,13 +7,14 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/main.css" >
     <script src="script/script.js"></script>
-    <?php include 'script/connect.php' ?>
+    <script src="js/flat.js"></script>
+    <?php include 'script/connect.php'?>
 </head>
 
 <body class="container">
 
 <header>
-    <div><a href="index.php">PROJECT GEN</a> <p>(ver. 0.3)</p></div>
+    <div><a href="main.php">PROJECT GEN</a> <p>(ver. 0.3)</p></div>
 </header>
 
 <nav>
@@ -296,7 +297,7 @@
                 <div class="flexButton">
                     <label for="tab3" title="Дополнительные сведения" class="button">Назад</label>
                     <label for="tab5" onclick="result()" title="Генерация описания" class="button">Сгенерировать</label>
-                    <label for="tab5" onclick="result()" title="Генерация описания" class="button">Далее</label>
+                    <label for="tab5" title="Генерация описания" class="button">Далее</label>
                 </div>
             </section>
 
@@ -306,7 +307,7 @@
                 <div class="flexButton">
                     <label for="tab4" title="Креатив" class="button">Назад</label>
                     <label for="tab5" onclick="result()" title="Генерация описания" class="button">Сгенерировать</label>
-                    <label for="tab5" onclick="result()" title="Генерация описания" class="button">Далее</label>
+                    <label for="tab5" title="Генерация описания" class="button">Далее</label>
                 </div>
             </section>
         </div>
@@ -317,7 +318,7 @@
 <footer>
     Project GEN 2018
 </footer>
-<script src="js/flat.js"></script>
+
 </body>
 
 </html>

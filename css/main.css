@@ -11,6 +11,10 @@ body {
                           "main main"
                          "footer footer";
     grid-row-gap: 30px;
+    background: url("../img/background.jpg") no-repeat fixed;
+    background-size: cover;
+    background-position: 50%;
+    -webkit-font-smoothing: antialiased;
 
 }
 *{
@@ -55,6 +59,43 @@ a{
 .left{grid-area:left;}
 .work{grid-area:work;}
 .right{grid-area:right;}
+
+.passback {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("../img/background.jpg") no-repeat fixed;
+    background-size: cover;
+    background-position: 50%;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+div.log{
+    text-align: center;
+    width: 75%;
+    margin: 20px;
+    padding: 20px;
+}
+
+.window {
+    margin: 0 auto;
+    width: 60%;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: inherit;
+    border-radius: 12px;
+}
+
+.alert {
+    color: red;
+}
+
 
 /*Стиль меню навигации*/
 ul.nav-menu {

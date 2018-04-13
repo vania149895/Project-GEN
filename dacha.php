@@ -11,7 +11,7 @@
 <body class="container">
 
 <header>
-    <div><a href="index.php">PROJECT GEN</a> <p>(ver. 0.3)</p></div>
+    <div><a href="main.php">PROJECT GEN</a> <p>(ver. 0.3)</p></div>
 </header>
 
 <nav>

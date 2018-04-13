@@ -1,64 +1,68 @@
+<?php
 
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru" dir="ltr">
+include 'script/connect.php';
+global $link;
+?>
 
+<html>
 <head>
-    <title>Генератор описаний</title>
+    <title>Доступ ограничен</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/main.css" >
-
 </head>
 
-<body class="container">
+<body class="passback">
 
-<header>
-    <div><a href="index.php">PROJECT GEN</a> <p>(ver. 0.3)</p></div>
-</header>
+<div class="log">
+    <h1>Добро пожаловать в генератор описаний недвижимости!</h1>
+    <p>Для того чтобы воспользоваться программой, пожалуйста авторизируйтесь в системе.</p>
+</div>
 
-<nav>
-    <ul class="nav-menu">
-        <li><a href="flat.php">Квартира</a></li>
-        <li><a href="house.php">Дом</a></li>
-        <li><a href="dacha.php">Дача</a></li>
-        <li><a href="area.php">Участок</a></li>
-    </ul>
-</nav>
-
-<main>
-    <div class="left"></div>
-    <div class="work">
-        <div class="hello">
-            <h1>Привет мой друг!</h1>
-            <p>Это программа была созданна специально для того, что бы ты смог создать прекрастное описания для своей недвижимости.</p>
-            <p>Если ты готов начать работу, выбери одну из категорий описываемой недвижимости.</p>
-        </div>
-        <table class="category" >
-            <tr>
-                <td align="right">
-                    <a href="flat.php"><div class="flat"><p>Квартира</p></div></a>
-                </td>
-                <td align="left">
-                    <a href="house.php"><div class="house"><p>Дом</p></div></a>
-                </td>
-            </tr>
-            <tr>
-                <td align="right">
-                    <a href="dacha.php"><div class="dacha"><p>Дача</p></div></a>
-                </td>
-                <td align="left">
-                    <a href="area.php"><div class="area"><p>Участок</p></div></a>
-                </td>
-            </tr>
-        </table>
+<div class="log">
+    <div class="window">
+        <h2>Введите логин и пароль:</h2>
+        <form method="POST">
+            <input type="text" name="user" placeholder="User">
+            <input type="password" name="paswd" placeholder="Password">
+            <input type="submit" name="submit">
+        </form>
+        <?php
+        if( isset($_POST['submit']) )
+        {
+            if(!empty($_POST['user']) && !empty($_POST['paswd']))
+            {
+                $sql="SELECT password FROM users WHERE (user='$_POST[user]')";
+                $result=mysqli_query($link, $sql);
+                if (mysqli_num_rows($result) > 0)
+                {
+                    while ($row = mysqli_fetch_assoc($result))
+                    if($_POST['paswd']==$row['password'])
+                    {
+                        session_start();
+                        $_SESSION['access'] = true;
+                        $_SESSION['admin']=$row['admin'];
+                        header("Location: main.php");
+                    }
+                    else
+                        echo "<p class='alert'>*Неверный пароль<p>";
+                }
+                else
+                    echo "<p class='alert'>*Пользователь не найден<p>";
+            }
+            else
+                echo "<p class='alert'>*Заполните все поля<p>";
+        }
+        ?>
     </div>
-    <div class="right"></div>
-</main>
+</div>
 
-<footer>
-    <p><a href="admin.php">Project GEN </a> 2018</p>
-</footer>
+
+<div class="log">
+    <a href="https://bugrealt.by"> <img src="img/logo.png" width="50%"></a>
+</div>
+
+
+
 
 </body>
-
-</html>
