@@ -17,7 +17,7 @@ else{ ?>
 <body class="container">
 
 <header>
-    <div><a href="main.php">PROJECT GEN</a> <p>(ver. 0.3)</p></div>
+    <div><a href="main.php"><img src="img/logo.png" width="110px"></a></div>
 </header>
 
 <nav>
@@ -60,7 +60,7 @@ else{ ?>
 </main>
 
 <footer>
-    <p><a href="admin.php">Project GEN </a> 2018</p>
+    <p><a href="admin.php">Project GEN</a>2018</p>
 </footer>
 
 </body>
