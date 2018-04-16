@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/main.css" >
     <script src="script/script.js"></script>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
     <?php include 'connect.php' ?>
 </head>
 <body class="container">

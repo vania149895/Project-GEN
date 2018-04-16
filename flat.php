@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" >
     <script src="script/script.js"></script>
     <script src="js/flat.js"></script>
+    <meta name="viewport" content="width=device-width; initial-scale=0.5">
     <?php include 'script/connect.php'?>
 </head>
 
