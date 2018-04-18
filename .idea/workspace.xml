@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="605b8bd0-1533-4b41-bbd0-6608686d966a" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flat.php" beforeDir="false" afterPath="$PROJECT_DIR$/flat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="95" column="18" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
+            <state relative-caret-position="411">
+              <caret line="325" column="15" selection-start-line="325" selection-start-column="15" selection-end-line="325" selection-end-column="15" />
               <folding>
                 <element signature="e#109#421#0" />
                 <element signature="e#423#457#0" />
@@ -31,6 +35,7 @@
                 <element signature="e#1085#1138#0" />
                 <element signature="e#963#1034#0" />
                 <element signature="e#1036#1057#0" />
+                <element signature="e#1167#1256#0" />
                 <element signature="e#1272#1296#0" />
                 <element signature="e#1314#1494#0" />
                 <element signature="e#1627#1796#0" />
@@ -107,7 +112,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getNoFar.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="getNoFar.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script/getNoFar.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -163,8 +168,8 @@
         <option value="$PROJECT_DIR$/script/script.js" />
         <option value="$PROJECT_DIR$/flat.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/main.php" />
         <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/main.php" />
       </list>
     </option>
   </component>
@@ -254,12 +259,12 @@
       <workItem from="1522399413459" duration="61220000" />
       <workItem from="1523089752622" duration="912000" />
       <workItem from="1523110369938" duration="53709000" />
-      <workItem from="1523358349750" duration="32427000" />
+      <workItem from="1523358349750" duration="32281000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153337000" />
+    <option name="totallyTimeSpent" value="153191000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="734" height="900" extended-state="6" />
@@ -370,6 +375,7 @@
             <element signature="e#1085#1138#0" />
             <element signature="e#963#1034#0" />
             <element signature="e#1036#1057#0" />
+            <element signature="e#1167#1256#0" />
             <element signature="e#1272#1296#0" />
             <element signature="e#1314#1494#0" />
             <element signature="e#1627#1796#0" />
@@ -446,6 +452,7 @@
             <element signature="e#1085#1138#0" />
             <element signature="e#963#1034#0" />
             <element signature="e#1036#1057#0" />
+            <element signature="e#1167#1256#0" />
             <element signature="e#1272#1296#0" />
             <element signature="e#1314#1494#0" />
             <element signature="e#1627#1796#0" />
@@ -619,54 +626,10 @@
     <entry file="file://$USER_HOME$/Desktop/login-form (1)/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/flat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="18" column="87" selection-start-line="18" selection-start-column="87" selection-end-line="18" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="n#section#1;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#2;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#3;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#4;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/getNoFar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="95" column="18" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
+        <state relative-caret-position="411">
+          <caret line="325" column="15" selection-start-line="325" selection-start-column="15" selection-end-line="325" selection-end-column="15" />
           <folding>
             <element signature="e#109#421#0" />
             <element signature="e#423#457#0" />
@@ -677,6 +640,7 @@
             <element signature="e#1085#1138#0" />
             <element signature="e#963#1034#0" />
             <element signature="e#1036#1057#0" />
+            <element signature="e#1167#1256#0" />
             <element signature="e#1272#1296#0" />
             <element signature="e#1314#1494#0" />
             <element signature="e#1627#1796#0" />
@@ -702,6 +666,50 @@
             <element signature="e#5245#6175#0" />
             <element signature="e#6224#6310#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/flat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="18" column="87" selection-start-line="18" selection-start-column="87" selection-end-line="18" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="n#section#1;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#2;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#3;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#4;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/getNoFar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
         </state>
       </provider>
     </entry>
