@@ -60,7 +60,7 @@ else{ ?>
 </main>
 
 <footer>
-    <p><a href="admin.php">Project GEN</a>2018</p>
+    <p><a href="admin.php">Project GEN</a> 2018-now</p>
 </footer>
 
 </body>

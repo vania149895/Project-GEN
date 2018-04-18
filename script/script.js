@@ -47,9 +47,23 @@ function loadHouse(str,str1,str2)
     xhttp.open("POST", "script/getHouse.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("city="+str2+"&district="+str1+"&street="+str);
+    window.street=document.getElementById("street_input").value;
     document.getElementById("number_input").value = "";
     document.getElementById("number_input").disabled = false;
 }
+
+function loadInfoNoFar(house,street,district,city) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("tableNoFar").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("POST", "script/changeNoFar.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("city=" + city + "&district=" + district + "&street=" + street + "&house=" + house);
+}
+
 
 
 

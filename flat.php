@@ -73,26 +73,15 @@
                     </div>
                     <div class="form">
                         <label for="number_input">Номер дома: </label>
-                        <input type="text" id="number_input" list="house" placeholder="Введите номер дома" disabled>
+                        <input id="number_input" list="house" onchange="loadInfoNoFar(this.value, window.street, window.district, window.city)" placeholder="Введите номер дома" disabled>
                         <datalist id="house">
                             <option>--УЛИЦА НЕ ВЫБРАНА--</option>
                         </datalist>
                     </div>
                 </div>
                 <h2>Что находится неподалеку?</h2>
-                <div class="flex">
-                    <div class="form">
-                        <u class="min">В 5-ти минутах ходьбы: </u>
-                        <?php include 'script/getNoFar.php' ?>
-                    </div>
-                    <div class="form">
-                        <u class="min">В 10-ти минутах ходьбы: </u>
-                        <?php include 'script/getNoFar.php' ?>
-                    </div>
-                    <div class="form">
-                        <u class="min">В 15-ти минутах ходьбы: </u>
-                        <?php include 'script/getNoFar.php' ?>
-                    </div>
+                <div class="flex" id="tableNoFar">
+                    <?php include 'script/getNoFar.php' ?>
                 </div>
                 <div class="flexButton">
                     <label for="tab1" title="Основные характеристики" class="button">Назад</label>

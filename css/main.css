@@ -93,7 +93,7 @@ div.log{
 ul.nav-menu {
     list-style: none;
     margin-right: 20px;
-    margin-top: 32px;
+    margin-top: 31px;
     float: right;
 }
 ul.nav-menu li {
@@ -318,12 +318,26 @@ div.flat{
     margin-top: 30px;
 
 }
+
+.flexButtonAdmin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+#Admin{
+    width: 300px;
+    margin: 15px;
+
+}
 div.form{
     width: 250px;
     margin: 10px;
 }
 div.form1{
-    font-size: ;
+    font-size: 16px ;
     width: 400px;
     margin: 10px;
 }
@@ -375,7 +389,7 @@ select{
 }
 
 
-textarea{
+textarea#gen_text{
     resize: none;
     width: 100%;
     box-sizing: border-box;
@@ -385,5 +399,35 @@ textarea{
     border-radius: 5px;
     border: 1px solid #dddddd;
     margin-top:10px;
+}
+textarea#house_info{
+    resize: none;
+    width: 100%;
+    box-sizing: border-box;
+    height: 150px;
+    font-size: 13pt;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+}
+
+table.adminTable{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    border: #dddddd;
+}
+table.adminTable td.head {
+    padding: 10px;
+}
+
+table.adminTable input.admin{
+    margin-top: 0px;
+    padding: 5px 20px;
+    border-radius: 0px;
+    border: 0px;
+
 
 }

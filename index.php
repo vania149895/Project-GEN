@@ -32,7 +32,7 @@ global $link;
         {
             if(!empty($_POST['user']) && !empty($_POST['paswd']))
             {
-                $sql="SELECT password FROM users WHERE (user='$_POST[user]')";
+                $sql="SELECT * FROM users WHERE (user='$_POST[user]')";
                 $result=mysqli_query($link, $sql);
                 if (mysqli_num_rows($result) > 0)
                 {
@@ -41,7 +41,8 @@ global $link;
                     {
                         session_start();
                         $_SESSION['access'] = true;
-                        $_SESSION['admin']=$row['admin'];
+                        if ($row['admin'] == '1')
+                            $_SESSION['admin'] = true;
                         header("Location: main.php");
                     }
                     else
@@ -59,7 +60,7 @@ global $link;
 
 
 <div class="log">
-    <a href="https://bugrealt.by"> <img src="img/logo.png" width="50%"></a>
+    <a href="https://bugrealt.by"> <img src="img/logo.png" width="45%"></a>
 </div>
 
 
