@@ -51,7 +51,7 @@ else{ ?>
                 <label for="tab5" title="Генерация описания">Генератор</label>
 
                 <section id="content-tab1">
-                    <h2>Выбирите редактируемый раздел сайта:</h2>
+                    <h2>Выберите редактируемый раздел сайта:</h2>
                     <div class="flex" id="tableDB">
                     </div>
                     <div class="flexButtonAdmin">
@@ -147,12 +147,6 @@ else{ ?>
                     </div>
                     <h2 class="hiden" id="addPlaceHead">Добавление записи:</h2>
                     <div class="flex hiden" id="addPlace">
-                        <div class="form">
-                            <input id="namePlace" placeholder="Название">
-                            <input type="submit" value="Добавить" onclick="addPlace()">
-                        </div>
-                    </div>
-                    <div class="flex hiden" id="changePlace">
                         <div class="form">
                             <input id="namePlace" placeholder="Название">
                             <input type="submit" value="Добавить" onclick="addPlace()">

@@ -84,7 +84,6 @@ function setInfo($val) {
     var place = document.getElementById("place");
     var addPlaceHead = document.getElementById("addPlaceHead");
     var addPlace = document.getElementById("addPlace");
-    var changePlace = document.getElementById("changePlace");
 
     switch ($val){
         case '0':
@@ -99,7 +98,6 @@ function setInfo($val) {
             place.classList.add("hiden");
             addPlaceHead.classList.add("hiden");
             addPlace.classList.add("hiden");
-            changePlace.classList.add("hiden");
             document.getElementById("city_input").value = "";
             document.getElementById("district_input").value = "";
             document.getElementById("district_input").disabled = true;
@@ -121,7 +119,6 @@ function setInfo($val) {
             place.classList.remove("hiden");
             addPlaceHead.classList.remove("hiden");
             addPlace.classList.remove("hiden");
-            changePlace.classList.add("hiden");
             document.getElementById("city_input").value = "";
             document.getElementById("district_input").value = "";
             document.getElementById("district_input").disabled = true;
@@ -142,7 +139,6 @@ function setInfo($val) {
             place.classList.remove("hiden");
             addPlaceHead.classList.remove("hiden");
             addPlace.classList.remove("hiden");
-            changePlace.classList.add("hiden");
             document.getElementById("city_input").value = "";
             document.getElementById("district_input").value = "";
             document.getElementById("district_input").disabled = true;
@@ -163,7 +159,6 @@ function setInfo($val) {
             place.classList.remove("hiden");
             addPlaceHead.classList.remove("hiden");
             addPlace.classList.remove("hiden");
-            changePlace.classList.add("hiden");
             document.getElementById("city_input").value = "";
             document.getElementById("district_input").value = "";
             document.getElementById("district_input").disabled = true;
@@ -184,7 +179,6 @@ function setInfo($val) {
             place.classList.remove("hiden");
             addPlaceHead.classList.remove("hiden");
             addPlace.classList.remove("hiden");
-            changePlace.classList.add("hiden");
             document.getElementById("city_input").value = "";
             document.getElementById("district_input").value = "";
             document.getElementById("district_input").disabled = true;
@@ -204,8 +198,7 @@ function setInfo($val) {
             placeHead.classList.remove("hiden");
             place.classList.remove("hiden");
             addPlaceHead.classList.remove("hiden");
-            addPlace.classList.add("hiden");
-            changePlace.classList.remove("hiden");
+            addPlace.classList.remove("hiden");
             document.getElementById("city_input").value = "";
             document.getElementById("district_input").value = "";
             document.getElementById("district_input").disabled = true;
@@ -230,23 +223,44 @@ function deletePlace(id) {
             document.getElementById("place").innerHTML = this.responseText;
         }
     };
-    xhttp.open("POST", "script/showPlace.php", true);
+    xhttp.open("POST", "script/deletePlace.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("info="+ info +"&city=" + city + "&district=" + district + "&street=" + street + "&house=" + house);
-    switch (info)
-    {
-        case 1:
-            break;
-        case 2:
-            break;
-        case 3:
-            break;
-        case 4:
-            break;
-        case 5:
-            break;
-    }
+    xhttp.send("info="+ info +"&city=" + city + "&district=" + district + "&street=" + street + "&house=" + house + "&id=" + id);
+}
 
+function changeCat(set, id) {
+    var info = document.getElementById("info").value;
+    var city = document.getElementById("city_input").value;
+    var district = document.getElementById("district_input").value;
+    var street = document.getElementById("street_input").value;
+    var house = document.getElementById("number_input").value;
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("place").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("POST", "script/changeCat.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("set="+set+"&info="+info+"&city=" + city + "&district=" + district + "&street=" + street + "&house=" + house + "&id=" + id);
+}
+function changeInfo(id) {
+    var info = document.getElementById("info").value;
+    var city = document.getElementById("city_input").value;
+    var district = document.getElementById("district_input").value;
+    var street = document.getElementById("street_input").value;
+    var house = document.getElementById("number_input").value;
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("place").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("POST", "script/changeInfo.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("info="+info+"&city=" + city + "&district=" + district + "&street=" + street + "&house=" + house + "&id=" + id);
 }
 
 function addPlace(str) {
@@ -265,18 +279,6 @@ function addPlace(str) {
     xhttp.open("POST", "script/showPlace.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("info="+ info +"&city=" + city + "&district=" + district + "&street=" + street + "&house=" + house);
-    switch (info)
-    {
-        case 1:
-            break;
-        case 2:
-            break;
-        case 3:
-            break;
-        case 4:
-            break;
-        case 5:
-            break;
-    }
+
 
 }

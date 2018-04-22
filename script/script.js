@@ -66,8 +66,6 @@ function loadInfoNoFar(house,street,district,city) {
 
 
 
-
-
 function getRoomSquere(room)
 {
     var rooms = room;
