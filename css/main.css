@@ -409,6 +409,7 @@ textarea#house_info{
     padding: 15px;
     border-radius: 5px;
     border: 1px solid #dddddd;
+    margin-bottom: 15px;
 }
 
 table.adminTable{

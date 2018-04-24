@@ -48,7 +48,7 @@
             <label for="tab5" title="Генерация описания">Готово</label>
 
             <section id="content-tab1">
-                <h2>Где распологается ваша недвижимость?</h2>
+                <h2>Где располагается ваша недвижимость?</h2>
                 <div class="flex">
                     <div class="form">
                         <label for="city_input">Город: </label>
