@@ -45,7 +45,7 @@
             <label for="tab4" title="Улучшение описания">Креатив</label>
 
             <input id="tab5" type="radio" name="tabs">
-            <label for="tab5" onclick="result()" title="Генерация описания">Готово</label>
+            <label for="tab5" title="Генерация описания">Готово</label>
 
             <section id="content-tab1">
                 <h2>Где распологается ваша недвижимость?</h2>
