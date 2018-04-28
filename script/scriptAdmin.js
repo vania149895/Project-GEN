@@ -263,12 +263,13 @@ function changeInfo(id) {
     xhttp.send("info="+info+"&city=" + city + "&district=" + district + "&street=" + street + "&house=" + house + "&id=" + id);
 }
 
-function addPlace(str) {
+function addPlace() {
     var info = document.getElementById("info").value;
     var city = document.getElementById("city_input").value;
     var district = document.getElementById("district_input").value;
     var street = document.getElementById("street_input").value;
     var house = document.getElementById("number_input").value;
+    var str = document.getElementById("namePlace").value;
 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -276,9 +277,9 @@ function addPlace(str) {
             document.getElementById("place").innerHTML = this.responseText;
         }
     };
-    xhttp.open("POST", "script/showPlace.php", true);
+    xhttp.open("POST", "script/addPlace.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("info="+ info +"&city=" + city + "&district=" + district + "&street=" + street + "&house=" + house);
-
+    xhttp.send("info="+ info +"&city=" + city + "&district=" + district + "&street=" + street + "&house=" + house + "&str=" + str);
+    document.getElementById("namePlace").value='';
 
 }
