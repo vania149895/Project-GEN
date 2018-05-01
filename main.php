@@ -12,8 +12,8 @@
 <?php
 session_start();
 if(!isset($_SESSION['access']) || $_SESSION['access']!=true){
-    header("location:index.php");}
-else{ ?>
+    header("location:index.php");}?>
+
 <body class="container">
 
 <header>
@@ -60,9 +60,17 @@ else{ ?>
 </main>
 
 <footer>
-    <p><a href="admin.php">Project GEN</a> 2018-now</p>
+    <div class="info">
+        <p>©Project GEN - уникальная программа для генерации описания недвижимости.</p>
+    </div>
+    <div class="href">
+        <?php
+        if ($_SESSION['admin']==true)
+            echo "<a href=\"admin.php\">Админ-панель</a>"?>
+        <a href="index.php">Выход</a>
+    </div>
 </footer>
 
 </body>
-<?php } ?>
+
 </html>

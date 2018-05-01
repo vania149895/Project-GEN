@@ -38,7 +38,7 @@ switch ($info)
                 echo "<p class='alert'>Ошибка БД: *" . mysqli_error($link) . "</p>";
         }
 
-        
+
         break;
 
     case 2:

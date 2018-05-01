@@ -135,7 +135,15 @@
     <div class="right"></div>
 </main>
 <footer>
-    <p>Project GEN 2018</p>
+    <div class="info">
+        <p>©Project GEN - уникальная программа для генерации описания недвижимости.</p>
+    </div>
+    <div class="href">
+        <?php
+        if ($_SESSION['admin']==true)
+            echo "<a href=\"admin.php\">Админ-панель</a>"?>
+        <a href="index.php">Выход</a>
+    </div>
 </footer>
 </body>
 </html>

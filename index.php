@@ -2,6 +2,9 @@
 
 include 'script/connect.php';
 global $link;
+session_start();
+session_unset();
+session_destroy();
 ?>
 
 <html>
@@ -43,6 +46,8 @@ global $link;
                         $_SESSION['access'] = true;
                         if ($row['admin'] == '1')
                             $_SESSION['admin'] = true;
+                        else
+                            $_SESSION['admin'] = false;
                         header("Location: main.php");
                     }
                     else

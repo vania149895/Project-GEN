@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 /*CSS GRID основаная сетка макета страницы*/
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: 'Lato', sans-serif;
     display: grid;
@@ -17,32 +21,16 @@ body {
     -webkit-font-smoothing: antialiased;
 
 }
-*{
-    margin: 0;
-    padding: 0;
-}
+
 header {
     grid-area:header;
     text-align: center;
-    border-bottom: 5px solid orange;
+    border-bottom: 4px solid orange;
 }
 nav {
     grid-area: nav;
-    border-bottom: 5px solid orange;
+    border-bottom: 4px solid orange;
     position: relative;
-}
-main {
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 1fr 85% 1fr;
-    grid-template-areas: "left work right";
-    grid-gap: 15px;
-}
-footer {
-    grid-area:footer;
-    background-color: #1f487c;
-    color: white;
-    padding: 10px;
 }
 header div {
     padding: 5px;
@@ -53,12 +41,46 @@ header, nav {
     color: white;
     height: 100%;
 }
-a{
-    color: white;
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 85% 1fr;
+    grid-template-areas: "left work right";
+    grid-gap: 15px;
 }
+
+footer {
+    grid-area:footer;
+    background-color: #1f487c;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 3px solid orange;
+}
+footer div.info{
+    margin-left: 20px;
+    max-width: 45%;
+}
+footer div a {
+    color: #fefefe;
+    text-decoration: none;
+    background: #396588;
+    margin-right: 10px;
+    padding: 10px 14px 10px 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 2px #30698F;
+}
+footer div a:hover {background: orange;}
+footer div a.selected {background: orange;}
+
 .left{grid-area:left;}
 .work{grid-area:work;}
 .right{grid-area:right;}
+
+
 
 /*Для формы входа*/
 .passback {
@@ -111,6 +133,7 @@ ul.nav-menu li a {
 }
 ul.nav-menu li a:hover {background: orange;}
 ul.nav-menu li a.selected {background: orange;}
+
 
 /*Стиль главного окна*/
 .hello{
@@ -178,11 +201,11 @@ div.flat{
     padding: 20px 30px 20px 30px;
     text-align: justify;
 }
-/* Базовый контейнер табов*/
+
+/* Стили вкладок*/
 .tabs {
     min-width: 320px;
 }
-/* Стили секций с содержанием */
 .tabs>section {
     display: none;
     padding: 25px;
@@ -202,19 +225,17 @@ div.flat{
     animation-name: fadeIn;
 }
 
-/* Описываем анимацию свойства opacity */
 @-webkit-keyframes fadeIn {
     from {opacity: 0;} to {opacity: 1;}
 }
 @keyframes fadeIn {
     from {opacity: 0;} to {opacity: 1;}
 }
-/* Прячем чекбоксы */
+
 .tabs>input {
     display: none;
     position: absolute;
 }
-/* Стили переключателей вкладок (табов) */
 .tabs>label {
     display: inline-block;
     margin: 0 0 -1px;
@@ -227,34 +248,31 @@ div.flat{
     border-radius: 3px 3px 0 0;
 
 }
-/* Прикручиваем иконки */
 .tabs>label:before {
     font-weight: bolder;
     margin-right: 10px;
 }
+
 .tabs>label[for*="1"]:before {content: "1";}
 .tabs>label[for*="2"]:before {content: "2";}
 .tabs>label[for*="3"]:before {content: "3";}
 .tabs>label[for*="4"]:before {content: "4";}
 .tabs>label[for*="5"]:before {content: "5";}
 
-/* Изменения стиля переключателей вкладок при наведении */
 .tabs>label:hover {
     color: #888;
     cursor: pointer;
 }
-/* Стили для активной вкладки */
 .tabs>input:checked+label {
     color: #555;
     border-top: 3px solid orange;
     border-bottom: 1px solid #fff;
     background: #fff;
 }
-/* Активация секций с помощью псевдокласса :checked */
 #tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4, #tab5:checked~#content-tab5 {
     display: block;
 }
-/* Убираем текст с переключателей и оставляем иконки */
+
 @media screen and (max-width: 900px) {
     .tabs>label {
         font-size: 0;
@@ -268,36 +286,24 @@ div.flat{
 
 /* Кнопки */
 .button {
-    /* Относительное позиционирование */
     position: relative;
-    /* Устанавливаем внутренние отступы */
     padding: 12px 20px;
-    /* Убираем подчёркивание и выравниваем текст по центру */
     text-decoration: none;
     text-align: center;
-    /* Размер и начертание шрифта */
     font-size: 20px;
     font-weight: bold;
-    /* Эффект тени текста */
     text-shadow: 1px 2px 2px #30698F;
-    /* Внешняя тень кнопки */
     -webkit-box-shadow: 0px 6px 0px #3a7faa, 0px 9px 25px rgba(0, 0, 0, 0.7);
     -moz-box-shadow: 0px 6px 0px #3a7faa, 0px 9px 25px rgba(0, 0, 0, 0.7);
     box-shadow: 0px 6px 0px #3a7faa, 0px 9px 25px rgba(0, 0, 0, 0.7);
-    /* Цвет текста */
     color: white;
-    /* Цвет фона кнопки */
     background-color: #458ecc;
-    /* Скругляем углы */
     border-radius: 8px;
-    /* Убираем рамку */
     border: none;
     outline: 0 none;
     overflow: hidden;
-    /* Курсор ввиде руки */
     cursor: pointer;
 }
-/* Кнопки при нажатии */
 .button:active {
     box-shadow: 0px 3px 0px #3a7faa, 0px 3px 6px rgba(0, 0, 0, 0.9);
     top: 3px;
@@ -305,12 +311,93 @@ div.flat{
 
 
 
+/* Оценка ремонта */
+.rating {
+    float:left;
+}
+
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover, .rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+.rating > input:checked + label:hover, .rating > input:checked + label:hover ~ label, .rating > input:checked ~ label:hover, .rating > input:checked ~ label:hover ~ label, .rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+
+
+
+
+.flexcheck{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+label.extra{
+    font-size: 12pt;
+    cursor: pointer;
+    color: #fefefe;
+    text-decoration: none;
+    background: #1f487c;
+    margin-bottom: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 8px 12px 8px 12px;
+    text-shadow: 1px 2px 2px #30698F;
+    border-radius: 5px;
+}
+.flexcheck input{
+    display: none;
+}
+label.extra:hover {
+    background: orange;
+    cursor: pointer;
+}
+input:checked + label.extra {
+    color: white;
+    background: orange;
+}
+
 
 .flex{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
 .flexButton{
     display: flex;
     justify-content: space-between;
@@ -400,7 +487,7 @@ textarea#gen_text{
     border: 1px solid #dddddd;
     margin-top:10px;
 }
-textarea#house_info{
+textarea{
     resize: none;
     width: 100%;
     box-sizing: border-box;
@@ -409,7 +496,7 @@ textarea#house_info{
     padding: 15px;
     border-radius: 5px;
     border: 1px solid #dddddd;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 table.adminTable{
