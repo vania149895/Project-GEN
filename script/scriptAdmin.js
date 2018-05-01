@@ -283,3 +283,41 @@ function addPlace() {
     document.getElementById("namePlace").value='';
 
 }
+function addCreative() {
+    $creative = document.getElementById("creative_input").value;
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("creativeInfo").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("POST", "script/addCreative.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("creative=" + $creative);
+    document.getElementById("creative_input").value='';
+}
+function deleteCreative($id) {
+    if (confirm("Вы уверены что хотите удалить значение?")) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                document.getElementById("creativeInfo").innerHTML = this.responseText;
+            }
+        };
+        xhttp.open("POST", "script/deleteCreative.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("id=" + $id);
+    }
+}
+function saveCreative($id) {
+    $creative = document.getElementById("creative"+$id).value;
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("creativeInfo").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("POST", "script/saveCreative.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("id=" + $id+"&creative=" + $creative);
+}

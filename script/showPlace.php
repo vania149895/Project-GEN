@@ -48,7 +48,7 @@
                 echo "<tr><td>Район или город не выбраны или не существуют в БД.</td></tr>";
             break;
         case 4:
-            $sql="SELECT id,".$city.$district.$street." FROM house ORDER BY ".$city.$district.$street. "";
+            $sql="SELECT id,".$city.$district.$street." FROM house WHERE ".$city.$district.$street."!='' ORDER BY ".$city.$district.$street. "";
             $result = mysqli_query($link, $sql);
             if ($result) {
                 echo "<tr><td class='head'>Дома (".$city.", ".$district.", ул. ".$street.")</td><td class='head'>Удалить</td></tr>";

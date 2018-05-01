@@ -160,10 +160,16 @@ if($_SESSION['access']!=true || $_SESSION['admin']!= true){
                 </section>
 
                 <section id="content-tab4">
-                    <h2>Креатив для улучшения уникальности описания:</h2>
+                    <h2>Настройки креатива:</h2>
+                    <div class="flex" id="creativeInfo">
+                        <?php include 'script/creativeInfo.php'?>
+                    </div>
+                    <h2>Добавление значения:</h2>
                     <div class="flex">
-                        <div class="form1">
-                            <?php include 'script/getCreative.php' ?>
+                        <div class="form">
+                            <label for="creative_input">Новое значение: </label>
+                            <input id="creative_input" placeholder="КРЕАТИВ">
+                            <input type="submit" value="Добавить" onclick="addCreative()">
                         </div>
                     </div>
                     <div class="flexButton">
@@ -174,8 +180,7 @@ if($_SESSION['access']!=true || $_SESSION['admin']!= true){
                 </section>
 
                 <section id="content-tab5">
-                    <h2>Нажмите кнопку для генирации описания:</h2>
-                    <textarea placeholder="Здесь сгенерируется идеальное и неповоторимое описание вашей недвижимости." id="gen_text"></textarea>
+                    <h2>Настройки скрипта для генерации описания:</h2>
                     <div class="flexButton">
                         <label for="tab4" title="Креатив" class="button">Назад</label>
                         <label for="tab5" onclick="result()" title="Генерация описания" class="button">Сгенерировать</label>
