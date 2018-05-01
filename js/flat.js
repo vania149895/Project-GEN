@@ -209,6 +209,16 @@ function LodgiaInfo (lodgia_value){
     return "";
 }
 
+function GetRepairValue (){
+    let repair_arr = [];
+    let res = -1;
+    for(let i = 0; i < 5; i++){
+        repair_arr[i] = document.getElementById("star"+(i+1));
+    }
+    repair_arr.forEach((item, index) =>{if(item.checked) res = index+1;});
+    return res;
+}
+
 //Функция принимает число(1, 2, 3, 4, 5) и возвращает строку о состоянии квартиры
 function QualityOfRepair(repair_value){
     switch(repair_value){
@@ -227,6 +237,8 @@ function QualityOfRepair(repair_value){
         case 5:
             return "Кваритра находится в отличном состоянии. ";
             break;
+        default:
+            return "";
     }
 }
 
@@ -253,22 +265,23 @@ function BathroomInfo(bathroom,wc_squere, closet_squere, bathroom_squere){
     let rand = Math.floor(1+Math.random()*n); 
     let p_one = "",
         p_two = "";
-    if(!bathroom || bathroom === "совмещенный"){
+    if(bathroom === "совмещенный"){
         if(!wc_squere)
             return "Свомещенный санузел. ";
         else
             return "Свомещенный санузел общей площадью " + wc_squere + " кв. м. ";
     }
     else if(bathroom === "раздельный"){
-        if(!!closet_squere){p_one = "туалетом площадью " + closet_squere + " кв. м. "}
-        if(!!bathroom){p_two = "ванной площадью " + bathroom_squere + " кв. м. "}
-        if(!!closet_squere && !!bathroom)
+        if(!!closet_squere){p_one = "туалетом площадью " + closet_squere + " кв. м. ";}
+        if(!!bathroom_squere){p_two = "ванной площадью " + bathroom_squere + " кв. м. ";}
+        if(!!closet_squere && !!bathroom_squere)
             return "Раздельный санузел c " + p_one + "и " + p_two;
-        else if(!!closet_squere || !!bathroom)
+        else if(!!closet_squere || !!bathroom_squere)
             return "Раздельный санузел c " + p_one + p_two;
         else
-            return "Раздельный санузел";
+            return "Раздельный санузел. ";
     }
+    return "";
 }
 
 //Главная функция которая собирает все переменные и производит генерацию
@@ -284,7 +297,7 @@ function result(){
     let cupboard = document.getElementById("cupboard").value;     //кладовка
     let cupboardSq = document.getElementById("cupboardSq").value;
     let lodgia = +document.getElementById("lodgia").value;           //балкон
-    let repair = +document.getElementById("repairs").value;
+    let repair = GetRepairValue();
     let squere_snb = document.getElementById("SquereSNB").value;
     let live_squere = document.getElementById("liveSquere").value;
     let rooms_squere = [document.getElementById("room1").value,
@@ -296,12 +309,10 @@ function result(){
     let closet_squere = document.getElementById("closetSq").value;
     let bathroom_squere = document.getElementById("bathSq").value;
     let house_info  = document.getElementById("house_info").value;
-    //----------СДЕЛАНО---------------------------
     let height = !!document.getElementById("height").value ? "Высота потолков : " + document.getElementById("height").value + " м. " : "";
     let kitchenSquere = !!document.getElementById("kitchenSquere").value ? "Площадь кухни: " + document.getElementById("kitchenSquere").value + " кв. м. " : ""; 
     let hallSq = !!document.getElementById("hallSq").value ? "Площадь прихожей: " + document.getElementById("hallSq").value + " кв. м. " : "";
     let text_area = document.getElementById("gen_text");
-    console.info(bathroom);
     text_area.value = Room(n_of_rooms) + CityAndDistrict(city,district) +  
     StreetAndHouse(street,n_of_build) + FloorAndType(floor_of_floors,type_of_walls) + 
     YearOfFoundation(year_of_found) + CupboardInfo(cupboard,cupboardSq) + 
