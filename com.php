@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html" xml:lang="ru-ru" lang="ru-ru" dir="ltr">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru" dir="ltr">
 
 <head>
-    <title>GEN | Квартира</title>
+    <title>GEN | Коммерческая недвижимость</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/main.css" >
-
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <script src="script/script.js"></script>
-    <?php include 'script/connect.php'?>
-    <script src="js/flat.js"></script>
+    <?php include 'script/connect.php' ?>
 </head>
 
 <?php
@@ -25,16 +23,16 @@ if(!isset($_SESSION['access']) || $_SESSION['access']!=true){
     </header>
     <nav>
         <ul class="nav-menu">
-            <li><a href="flat.php" class="selected">Квартиры</a></li>
+            <li><a href="flat.php">Квартиры</a></li>
             <li><a href="house.php">Дома</a></li>
-            <li><a href="com.php">Коммерческая </a></li>
+            <li><a href="com.php" class="selected">Коммерческая </a></li>
         </ul>
     </nav>
 
     <main>
         <div class="left"></div>
         <div class="work">
-            <h4 class="instruct">Что бы создать описание квартиры, заполните все поля и нажмите кнопку сгенерировать.</h4>
+            <h4 class="instruct">Что бы создать описание комерческой недвижимости, проследуйте простым указаниям.</h4>
             <div class="tabs">
                 <input id="tab1" type="radio" name="tabs" checked>
                 <label for="tab1" title="Данные о расположении">Место</label>
@@ -54,12 +52,13 @@ if(!isset($_SESSION['access']) || $_SESSION['access']!=true){
                 <section id="content-tab1">
                     <h2>Выбирите объект и цель его описания:</h2>
                     <div class="flexcheck">
-                        <input type="radio" name="object" id="flat"><label for="flat" class="extra">Квартира</label>
-                        <input type="radio" name="object" id="room"><label for="room" class="extra">Комната в квартире</label>
+                        <input type="radio" name="object" id="office"><label for="office" class="extra">Офис</label>
+                        <input type="radio" name="object" id="shop"><label for="shop" class="extra">Тороговое помещение</label>
+                        <input type="radio" name="object" id="stock"><label for="stock" class="extra">Склад</label>
+                        <input type="radio" name="object" id="factory"><label for="factory" class="extra">Производственное помещение</label>
                     </div>
                     <div class="flexcheck">
-                        <input type="radio" name="deal" id="forDay"><label for="forDay" class="extra">Посуточная аренда</label>
-                        <input type="radio" name="deal" id="forLong"><label for="forLong" class="extra">Долгосрочная аренда</label>
+                        <input type="radio" name="deal" id="forLong"><label for="forLong" class="extra">Аренда</label>
                         <input type="radio" name="deal" id="Sale"><label for="Sale" class="extra">Продажа</label>
                     </div>
                     <h2>Где располагается ваша недвижимость?</h2>
@@ -108,13 +107,13 @@ if(!isset($_SESSION['access']) || $_SESSION['access']!=true){
                     <h2>Общие сведения о недвижимости:</h2>
                     <div class="flex">
                         <div class="form">
-                            <label for="rooms">Количество комнат:</label>
+                            <label for="rooms">Количество помещений:</label>
                             <select id="rooms" onchange="getRoomSquere(this.value)">
                                 <option value="">--Выберите кол-во комнат--</option>
-                                <option value="1">Однокомнатная</option>
-                                <option value="2">Двукомнатная</option>
-                                <option value="3">Трехкомнатная</option>
-                                <option value="4">Четырехкомнатная</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
                             </select>
                         </div>
                         <div class="form">
@@ -135,31 +134,6 @@ if(!isset($_SESSION['access']) || $_SESSION['access']!=true){
                             <input id="year" placeholder="Введите год постройки">
                         </div>
                         <div class="form">
-                            <label for="cupboard">Наличие кладовки:</label>
-                            <select id="cupboard" onchange="getCupboard(this.value)">
-                                <option value="">--Кладовка--</option>
-                                <option value="1">Есть</option>
-                                <option value="2">Нет</option>
-                            </select>
-                        </div>
-                        <div class="form">
-                            <label for="lodgia">Наличие лоджии:</label>
-                            <select id="lodgia">
-                                <option value="">--Лоджия--</option>
-                                <option value="1">Нет</option>
-                                <option value="2">1 лоджия</option>
-                                <option value="3">2 лоджии</option>
-                            </select>
-                        </div>
-                        <div class="form">
-                            <label for="San">Санузел:</label>
-                            <select id="San" onchange="getCloset(this.value)">
-                                <option value="">--Тип санузла--</option>
-                                <option value="совмещенный">Совмещенный</option>
-                                <option value="раздельный">Раздельный</option>
-                            </select>
-                        </div>
-                        <div class="form">
                             <label for="height">Высота потолков:</label>
                             <input id="height" placeholder="Введитете высоту в м">
                         </div>
@@ -167,57 +141,27 @@ if(!isset($_SESSION['access']) || $_SESSION['access']!=true){
                     <h2>Информация о площади:</h2>
                     <div class="flex">
                         <div class="form">
-                            <label for="SquereSNB">Площадь по СНБ:</label>
+                            <label for="SquereSNB">Общая площадь:</label>
                             <input id="SquereSNB" placeholder="Введитете полощадь в м2">
-                        </div>
-                        <div class="form">
-                            <label for="liveSquere">Жилая площадь:</label>
-                            <input id="liveSquere" placeholder="Введитете полощадь в м2">
-                        </div>
-                        <div class="form">
-                            <label for="kitchenSquere">Площадь кухни:</label>
-                            <input id="kitchenSquere" placeholder="Введитете полощадь в м2">
                         </div>
 
                         <div class="form" id="1room">
-                            <label for="room1">Площадь 1-ой комнаты:</label>
+                            <label for="room1">Площадь 1-го помещения:</label>
                             <input id="room1" placeholder="Введитете полощадь в м2">
                         </div>
                         <div class="form hiden" id="2room">
-                            <label for="room2">Площадь 2-ой комнаты:</label>
+                            <label for="room2">Площадь 2-го помещения:</label>
                             <input id="room2" placeholder="Введитете полощадь в м2">
                         </div>
                         <div class="form hiden" id="3room">
-                            <label for="room3">Площадь 3-ей комнаты:</label>
+                            <label for="room3">Площадь 3-го помещения:</label>
                             <input id="room3" placeholder="Введитете полощадь в м2">
                         </div>
                         <div class="form hiden" id="4room">
-                            <label for="room4">Площадь 4-ой комнаты:</label>
+                            <label for="room4">Площадь 4-го помещения:</label>
                             <input id="room4" placeholder="Введитете полощадь в м2">
                         </div>
 
-                        <div class="form" id="sqWC">
-                            <label for="wcSq">Площадь cанузла:</label>
-                            <input id="wcSq" placeholder="Введитете полощадь в м2">
-                        </div>
-                        <div class="form hiden" id="sqCloset">
-                            <label for="closetSq">Площадь туалета:</label>
-                            <input id="closetSq" placeholder="Введитете полощадь в м2" >
-                        </div>
-                        <div class="form hiden" id="sqBath">
-                            <label for="bathSq">Площадь ванной комнаты:</label>
-                            <input id="bathSq" placeholder="Введитете полощадь в м2">
-                        </div>
-
-                        <div class="form">
-                            <label for="hallSq">Площадь прихожей:</label>
-                            <input id="hallSq" placeholder="Введитете полощадь в м2">
-                        </div>
-
-                        <div class="form hiden" id="sqCupboard">
-                            <label for="cupboardSq">Площадь кладовки:</label>
-                            <input id="cupboardSq" placeholder="Введитете полощадь в м2">
-                        </div>
                     </div>
                     <div class="flexButton">
                         <label for="tab1" title="Местоположение" class="button">Назад</label>
@@ -272,12 +216,10 @@ if(!isset($_SESSION['access']) || $_SESSION['access']!=true){
                     <div class="flexcheck">
                         <input type="checkbox" id="extra1"><label for="extra1" class="extra">+Парковка</label>
                         <input type="checkbox" id="extra2"><label for="extra2" class="extra">+Подвал</label>
-                        <input type="checkbox" id="extra3"><label for="extra3" class="extra">+Детская площадка</label>
-                        <input type="checkbox" id="extra4"><label for="extra4" class="extra">+Новая сантехника</label>
-                        <input type="checkbox" id="extra5"><label for="extra5" class="extra">+Приватизированная</label>
-                        <input type="checkbox" id="extra6"><label for="extra6" class="extra">+Лоджия застеклена</label>
-                        <input type="checkbox" id="extra7"><label for="extra7" class="extra">+Консъерж</label>
-                        <input type="checkbox" id="extra8"><label for="extra8" class="extra">+Домофон</label>
+                        <input type="checkbox" id="extra3"><label for="extra3" class="extra">+Водоснабжение</label>
+                        <input type="checkbox" id="extra4"><label for="extra4" class="extra">+Газоснабжение</label>
+                        <input type="checkbox" id="extra5"><label for="extra5" class="extra">+Электричество</label>
+                        <input type="checkbox" id="extra6"><label for="extra6" class="extra">+Охрана</label>
                     </div>
 
                     <h2>Состояние ремонта:</h2>
@@ -317,43 +259,6 @@ if(!isset($_SESSION['access']) || $_SESSION['access']!=true){
                         <input type="checkbox" id="wall4"><label for="wall4" class="extra">+Декоративная штукатурка</label>
                         <input type="checkbox" id="wall5"><label for="wall5" class="extra">+Плитка</label>
                         <input type="checkbox" id="wall6"><label for="wall6" class="extra">+Камень</label>
-                    </div>
-
-                    <h2>Мебель:</h2>
-                    <div class="flexcheck">
-                        <input type="checkbox" id="furniture1"><label for="furniture1" class="extra">+Кухня</label>
-                        <input type="checkbox" id="furniture2"><label for="furniture2" class="extra">+Диван</label>
-                        <input type="checkbox" id="furniture3"><label for="furniture3" class="extra">+Двуспальная кровать</label>
-                        <input type="checkbox" id="furniture4"><label for="furniture4" class="extra">+Кровать</label>
-                        <input type="checkbox" id="furniture5"><label for="furniture5" class="extra">+Шкаф</label>
-                        <input type="checkbox" id="furniture6"><label for="furniture6" class="extra">+Встроенный шкаф</label>
-                        <input type="checkbox" id="furniture7"><label for="furniture7" class="extra">+Стелаж</label>
-                        <input type="checkbox" id="furniture8"><label for="furniture8" class="extra">+Комод</label>
-                        <input type="checkbox" id="furniture9"><label for="furniture9" class="extra">+Стол обеденный</label>
-                        <input type="checkbox" id="furniture10"><label for="furniture10" class="extra">+Стол письменный</label>
-                        <input type="checkbox" id="furniture11"><label for="furniture11" class="extra">+Стулья</label>
-                        <input type="checkbox" id="furniture12"><label for="furniture12" class="extra">+Кресла</label>
-                    </div>
-                    <h2>Бытовая техника:</h2>
-                    <div class="flexcheck">
-                        <input type="checkbox" id="tech1"><label for="tech1" class="extra">+Газовая плита</label>
-                        <input type="checkbox" id="tech2"><label for="tech2" class="extra">+Варочная панель</label>
-                        <input type="checkbox" id="tech3"><label for="tech3" class="extra">+Стиральная машина</label>
-                        <input type="checkbox" id="tech4"><label for="tech4" class="extra">+Холодильник</label>
-                        <input type="checkbox" id="tech5"><label for="tech5" class="extra">+Утюг</label>
-                        <input type="checkbox" id="tech6"><label for="tech6" class="extra">+Электрочайник</label>
-                        <input type="checkbox" id="tech7"><label for="tech7" class="extra">+Микроволновая печь</label>
-                        <input type="checkbox" id="tech8"><label for="tech8" class="extra">+Телевизор</label>
-                        <input type="checkbox" id="tech9"><label for="tech9" class="extra">+Музыкальный центр</label>
-                        <input type="checkbox" id="tech10"><label for="tech10" class="extra">+Телефон</label>
-                    </div>
-                    <h2>Прочие удобства:</h2>
-                    <div class="flexcheck">
-                        <input type="checkbox" id="comfort1"><label for="comfort1" class="extra">+Интернет (оптоволкно)</label>
-                        <input type="checkbox" id="comfort2"><label for="comfort2" class="extra">+Интернет</label>
-                        <input type="checkbox" id="comfort3"><label for="comfort3" class="extra">+Спутниковое ТВ</label>
-                        <input type="checkbox" id="comfort4"><label for="comfort4" class="extra">+Кабельное ТВ</label>
-                        <input type="checkbox" id="comfort5"><label for="comfort5" class="extra">+WI-FI</label>
                     </div>
                     <div class="flexButton">
                         <label for="tab2" title="Основные характеристики" class="button">Назад</label>

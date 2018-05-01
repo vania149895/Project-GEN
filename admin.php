@@ -6,27 +6,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/main.css" >
+
     <script src="script/scriptAdmin.js"></script>
     <script src="script/script.js"></script>
     <?php include 'script/connect.php'; ?>
 </head>
+
 <?php
 session_start();
 if($_SESSION['access']!=true || $_SESSION['admin']!= true){
     header("location:index.php");}?>
 
-    <body class="container">
+<body class="container">
 
     <header>
-        <div><a href="main.php"><img src="img/logo.png" width="110px"></a></div>
+        <div><a href="main.php"><img src="img/logo.png" width="130px"></a></div>
     </header>
-
     <nav>
         <ul class="nav-menu">
-            <li><a href="flat.php">Квартира</a></li>
-            <li><a href="house.php">Дом</a></li>
-            <li><a href="dacha.php">Дача</a></li>
-            <li><a href="area.php">Участок</a></li>
+            <li><a href="flat.php">Квартиры</a></li>
+            <li><a href="house.php">Дома</a></li>
+            <li><a href="com.php">Коммерческая </a></li>
         </ul>
     </nav>
 
@@ -198,7 +198,5 @@ if($_SESSION['access']!=true || $_SESSION['admin']!= true){
             <a href="index.php">Выход</a>
         </div>
     </footer>
-
-    </body>
-
+</body>
 </html>
