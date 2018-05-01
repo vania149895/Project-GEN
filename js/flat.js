@@ -1,12 +1,27 @@
-//Функция принимает количество комнат в виде числа и возвращает тектовый вариант
-function Room(room_numers){     
-    var arr = [["Однокомнатная квартира", "Квартира с одной комнатой", "Однушка"],  //Массив с возможными вар. 
-               ["Двухкомнатная квартира", "Квартира с двумя комнатами", "Двушка"],  //описания кв, где первый
-               ["Трехкомнатная квартира", "Квартира с тремя комнатами", "Трешка"],  //индекс это кол-во комнат
-        [],                                                                         //а второй вариация 
-        []];
-    var rand = "";
-    if(!room_numers)
+//Функция принимает количество комнат в виде числа и возвращает тектовый вариант 
+function Room(room_numers){ 
+    let is_room = document.getElementById("room");
+    let is_flat = document.getElementById("flat");
+    let arr_for_flat = [["однокомнатная квартира", "квартира с одной комнатой", "однушка"], 
+                        ["двухкомнатная квартира", "квартира с двумя комнатами", "двушка"], 
+                        ["трехкомнатная квартира", "квартира с тремя комнатами", "трешка"],];
+    
+    let arr_for_room = [["комната в однокомнатной квартире", "комната в квартире с одной комнатой", "комната в Однушке"], 
+                        ["комната в двухкомнатной квартире", "комната в квартире с двумя комнатами", "комната в двушке"], 
+                        ["комната в трехкомнатной квартире", "комната в квартире с тремя комнатами", "комната в трешке"],];
+    let rand = 0;
+    let arr = [];
+    if(is_room.checked)
+        arr = arr_for_room;
+    else if(is_flat.checked)
+        arr = arr_for_flat;
+    else 
+        arr = arr_for_flat;
+    if(!room_numers && is_flat.checked)
+        return "квартира";
+    else if(!room_numers && is_room.checked)
+        return "комната";
+    else if(!room_numers)
         return "";
     rand = Math.round(Math.random()*arr[room_numers-1].length);
     if(rand > arr[room_numers-1].length-1)
@@ -284,6 +299,20 @@ function BathroomInfo(bathroom,wc_squere, closet_squere, bathroom_squere){
     return "";
 }
 
+function TypeOfDeal (){
+    let day = document.getElementById("forDay");
+    let long = document.getElementById("forLong");
+    let sale = document.getElementById("Sale");
+    if(day.checked)
+        return "в посуточную аренду сдается ";
+    else if(long.checked)
+        return "в длительную аренду сдается ";
+    else if(sale.checked)
+        return "продается ";
+    else 
+        return "";
+}
+
 //Главная функция которая собирает все переменные и производит генерацию
 function result(){
     let city = document.getElementById("city_input").value ;
@@ -308,15 +337,18 @@ function result(){
     let wc_squere = document.getElementById("wcSq").value;
     let closet_squere = document.getElementById("closetSq").value;
     let bathroom_squere = document.getElementById("bathSq").value;
-    let house_info  = document.getElementById("house_info").value;
+    let area_info  = document.getElementById("house_info").value;
     let height = !!document.getElementById("height").value ? "Высота потолков : " + document.getElementById("height").value + " м. " : "";
     let kitchenSquere = !!document.getElementById("kitchenSquere").value ? "Площадь кухни: " + document.getElementById("kitchenSquere").value + " кв. м. " : ""; 
     let hallSq = !!document.getElementById("hallSq").value ? "Площадь прихожей: " + document.getElementById("hallSq").value + " кв. м. " : "";
     let text_area = document.getElementById("gen_text");
-    text_area.value = Room(n_of_rooms) + CityAndDistrict(city,district) +  
-    StreetAndHouse(street,n_of_build) + FloorAndType(floor_of_floors,type_of_walls) + 
+    let text_creative = document.getElementById("creative").value;
+    let type_of_deal = TypeOfDeal();
+    text_area.value = type_of_deal + Room(n_of_rooms) + CityAndDistrict(city,district) +  
+    StreetAndHouse(street,n_of_build) + area_info + FloorAndType(floor_of_floors,type_of_walls) + 
     YearOfFoundation(year_of_found) + CupboardInfo(cupboard,cupboardSq) + 
     LodgiaInfo(lodgia) + QualityOfRepair(repair) + SquereInfo(squere_snb,live_squere) + 
     SquereOfRooms(rooms_squere) + BathroomInfo(bathroom,wc_squere, closet_squere, bathroom_squere) + 
-    kitchenSquere + hallSq + height + house_info;
+    kitchenSquere + hallSq + height + text_creative;
+    text_area.value = text_area.value[0].toUpperCase() + text_area.value.slice(1,text_area.value.length);
 }
