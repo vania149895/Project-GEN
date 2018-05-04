@@ -1,6 +1,6 @@
 //Функция принимает количество комнат в виде числа и возвращает тектовый вариант 
 function Room(room_numers){ 
-    let is_room = document.getElementById("room");
+    let is_room = document.getElementById("room");  //две переменные для того чтобы понять квартира или комната
     let is_flat = document.getElementById("flat");
     let arr_for_flat = [["однокомнатная квартира", "квартира с одной комнатой", "однушка"], 
                         ["двухкомнатная квартира", "квартира с двумя комнатами", "двушка"], 
@@ -178,7 +178,7 @@ function YearOfFoundation(year){
 }
 
 //Функция принимает число(1 - есть кладовка, 2 - нет) и площадь кладовки, возвращает строку с введенными данными
-function CupboardInfo (cupboard, cupboardSq){
+function CupboardInfo(cupboard, cupboardSq){
     let n = 2;                                        // количество возможных вариаций
     let rand = Math.floor(1+Math.random()*n);
     let part_one = "",
@@ -200,7 +200,7 @@ function CupboardInfo (cupboard, cupboardSq){
 }
 
 //Функция принимает число (1, 2, 3) и возвращает строку, говорящую о наличии лоджии
-function LodgiaInfo (lodgia_value){
+function LodgiaInfo(lodgia_value){
     let n = 2;                                        // количество возможных вариаций
     let rand = Math.floor(1+Math.random()*n);
     switch(rand){
@@ -299,7 +299,7 @@ function BathroomInfo(bathroom,wc_squere, closet_squere, bathroom_squere){
     return "";
 }
 
-function TypeOfDeal (){
+function TypeOfDeal(){
     let day = document.getElementById("forDay");
     let long = document.getElementById("forLong");
     let sale = document.getElementById("Sale");
@@ -311,6 +311,165 @@ function TypeOfDeal (){
         return "продается ";
     else 
         return "";
+}
+
+function ExtraInfo(){
+    let extra_info = [];
+    let res = "";
+    for(let i = 0; i < 8; i++){
+        extra_info[i] = document.getElementById("extra"+(i+1));
+    }
+    if(extra_info[0].checked)
+        res+="Имеется личная парковка. ";
+    if(extra_info[1].checked)
+        res+="В вашем распоряжении будет подвал. ";
+    if(extra_info[2].checked)
+        res+="У дома есть детская площадка. ";
+    if(extra_info[3].checked)
+        res+="В квартире вся сантехника новая. ";
+    if(extra_info[4].checked)
+        res+="Квартира приватизирована. ";
+    if(extra_info[5].checked)
+        res+="Все лоджии застеклены. ";
+    if(extra_info[6].checked)
+        res+="В доме есть консъерж. ";
+    if(extra_info[7].checked)
+        res+="Также дом оснащен домофоном. ";
+    return res;
+}
+
+function CeilingDecorationInfo(){
+    let res = GetAllChecked("up","ceiling_item");
+    if(!res)
+        return "";
+    return "Материалы отделки потолка: " + res;
+}
+
+function WallDecorationInfo(){
+    let res = GetAllChecked("wall","wall_item");
+    if(!res)
+        return "";
+    return "Материалы отделки стен: " + res;
+}
+
+function FloorDecorationInfo(){
+    let res = GetAllChecked("down","floor_item");
+    if(!res)
+        return "";
+    return "Материалы отделки пола: " + res;
+}
+
+function FurnitureInfo(){
+    let res = GetAllChecked("furniture","furniture_item");
+    if(!res)
+        return "";
+    return "Из мебели в квартире есть: " + res;
+}
+
+function TechInfo(){
+    let res = GetAllChecked("tech","tech_item");
+    if(!res)
+        return ""; 
+    return "Бытовая техника в квартире: " + res;
+}
+
+function ComfortInfo(){
+    let res = GetAllChecked("comfort","comfort_item");
+    if(!res)
+        return ""; 
+    return "Удобства в квартире: " + res;
+}
+
+function EnterDoorInfo(door_value){
+    if(!door_value)
+        return "";
+    switch(door_value){
+        case 1:
+            return "Алюминивая входная дверь. ";
+        case 2:
+            return "Деревянная входная дверь. ";
+        case 3:
+            return "Пластиковая входная дверь. ";
+        case 4:
+            return "Стальная входная дверь. ";
+        default :
+            return "";
+    }
+}
+
+function InDoorInfo(door_value){
+    if(!door_value)
+        return "";
+    switch(door_value){
+        case 1:
+            return "Межкомнатные двери сделанны из массива. ";
+        case 2:
+            return "Шпонированные межкомнатыне двери. ";
+        case 3:
+            return "Межкомнатные двери - пластиковые. ";
+        case 4:
+            return "Межкомнатные двери сделаны из ламинированного ДСП. ";
+        case 5:
+            return "Стеклянные межкомнатные двери. ";
+        default :
+            return "";
+    }
+}
+
+function WindowsInfo(window_value){
+    if(!window_value)
+        return "";
+    switch(window_value){
+        case 1:
+            return "В квартире стоят хорошие пластиковые(ПВХ) окна. ";
+        case 2:
+            return "В квартире стоят деревянные окна. ";
+        case 3:
+            return "В квартире установленны металлопластикавые окна. ";
+        default :
+            return "";
+    }
+}
+
+function LightInfo(light_value){
+    if(!light_value)
+        return "";
+    switch(light_value){
+        case 1:
+            return "Освещение в квартире - диодное. ";
+        case 2:
+            return "В качестве освещаения в квартире используюстя лампы накаливания. ";
+        case 3:
+            return "Освещают квартиру энергосбеергающие лампы. ";
+        default :
+            return "";
+    }
+}
+
+function GetAllChecked(input_id, label_class){
+    let input_array = [],
+        label_array = [];
+    let res = "";
+    let k = 0;
+    let i = 0;
+    do{
+        input_array[i] = document.getElementById(input_id+(i+1));
+        i++;
+    }while(!!input_array[i-1]);
+    input_array.pop();
+    label_array = [...document.getElementsByClassName(label_class)];
+    for(let i = 0; i < 5; i++){
+        if(input_array[i].checked)
+            k = 1;
+    }
+    if(k === 0)
+        return "";
+    for(let i = 0; i < input_array.length; i++){
+        if(input_array[i].checked)
+            res+=(label_array[i].innerHTML).slice(1,label_array[i].innerHTML.length).toLocaleLowerCase() + ", ";
+    }
+    res = res.slice(0, res.length-2) + ". ";
+    return res;
 }
 
 //Главная функция которая собирает все переменные и производит генерацию
@@ -343,12 +502,19 @@ function result(){
     let hallSq = !!document.getElementById("hallSq").value ? "Площадь прихожей: " + document.getElementById("hallSq").value + " кв. м. " : "";
     let text_area = document.getElementById("gen_text");
     let text_creative = document.getElementById("creative").value;
-    let type_of_deal = TypeOfDeal();
-    text_area.value = type_of_deal + Room(n_of_rooms) + CityAndDistrict(city,district) +  
+    let decoration_info = CeilingDecorationInfo() + FloorDecorationInfo() + WallDecorationInfo();
+    let enter_door = +document.getElementById("EnterDoor").value;
+    let in_door = +document.getElementById("doorIn").value;
+    let windows = +document.getElementById("windows").value;
+    let light = +document.getElementById("light").value;
+    
+    text_area.value = TypeOfDeal() + Room(n_of_rooms) + CityAndDistrict(city,district) +  
     StreetAndHouse(street,n_of_build) + area_info + FloorAndType(floor_of_floors,type_of_walls) + 
     YearOfFoundation(year_of_found) + CupboardInfo(cupboard,cupboardSq) + 
     LodgiaInfo(lodgia) + QualityOfRepair(repair) + SquereInfo(squere_snb,live_squere) + 
     SquereOfRooms(rooms_squere) + BathroomInfo(bathroom,wc_squere, closet_squere, bathroom_squere) + 
-    kitchenSquere + hallSq + height + text_creative;
+    kitchenSquere + hallSq + height + EnterDoorInfo(enter_door) + InDoorInfo(in_door) + WindowsInfo(windows) + LightInfo(light) + ExtraInfo() + decoration_info + FurnitureInfo() + TechInfo() + ComfortInfo() +
+    text_creative;
+    
     text_area.value = text_area.value[0].toUpperCase() + text_area.value.slice(1,text_area.value.length);
 }

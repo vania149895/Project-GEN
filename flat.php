@@ -230,8 +230,8 @@ if(!isset($_SESSION['access']) || $_SESSION['access']!=true){
                     <h2>Дополнительная информация о недвижимости:</h2>
                     <div class="flex">
                         <div class="form">
-                            <label for="doorIn">Входная дверь:</label>
-                            <select id="doorIn">
+                            <label for="EnterDoor">Входная дверь:</label>
+                            <select id="EnterDoor">
                                 <option value="">--Входная дверь--</option>
                                 <option value="1">Алюминевая</option>
                                 <option value="2">Деревянная</option>
@@ -260,8 +260,8 @@ if(!isset($_SESSION['access']) || $_SESSION['access']!=true){
                             </select>
                         </div>
                         <div class="form">
-                            <label for="windows">Освещение:</label>
-                            <select id="windows">
+                            <label for="light">Освещение:</label>
+                            <select id="light">
                                 <option value="">--Освещение--</option>
                                 <option value="1">Диодное</option>
                                 <option value="2">Лампы накаливания</option>
@@ -294,66 +294,66 @@ if(!isset($_SESSION['access']) || $_SESSION['access']!=true){
                     <h2>Отделка</h2>
                     <div class="flex"><h4>ПОТОЛОК:</h4></div>
                     <div class="flexcheck">
-                        <input type="checkbox" id="up1"><label for="up1" class="extra">+Побелка</label>
-                        <input type="checkbox" id="up2"><label for="up2" class="extra">+Краска</label>
-                        <input type="checkbox" id="up3"><label for="up3" class="extra">+Обои</label>
-                        <input type="checkbox" id="up4"><label for="up4" class="extra">+Потолочная плитка</label>
-                        <input type="checkbox" id="up5"><label for="up5" class="extra">+Гипсокартон</label>
-                        <input type="checkbox" id="up6"><label for="up6" class="extra">+Натяжной</label>
+                        <input type="checkbox" id="up1"><label for="up1" class="extra ceiling_item">+Побелка</label>
+                        <input type="checkbox" id="up2"><label for="up2" class="extra ceiling_item">+Краска</label>
+                        <input type="checkbox" id="up3"><label for="up3" class="extra ceiling_item">+Обои</label>
+                        <input type="checkbox" id="up4"><label for="up4" class="extra ceiling_item">+Потолочная плитка</label>
+                        <input type="checkbox" id="up5"><label for="up5" class="extra ceiling_item">+Гипсокартон</label>
+                        <input type="checkbox" id="up6"><label for="up6" class="extra ceiling_item">+Натяжной</label>
                     </div>
                     <div class="flex"><h4>ПОЛ:</h4></div>
                     <div class="flexcheck">
-                        <input type="checkbox" id="down1"><label for="down1" class="extra">+Ламинат</label>
-                        <input type="checkbox" id="down2"><label for="down2" class="extra">+Паркет</label>
-                        <input type="checkbox" id="down3"><label for="down3" class="extra">+Плитка</label>
-                        <input type="checkbox" id="down4"><label for="down4" class="extra">+Линолеум</label>
-                        <input type="checkbox" id="down5"><label for="down5" class="extra">+Ковролин</label>
+                        <input type="checkbox" id="down1"><label for="down1" class="extra floor_item">+Ламинат</label>
+                        <input type="checkbox" id="down2"><label for="down2" class="extra floor_item">+Паркет</label>
+                        <input type="checkbox" id="down3"><label for="down3" class="extra floor_item">+Плитка</label>
+                        <input type="checkbox" id="down4"><label for="down4" class="extra floor_item">+Линолеум</label>
+                        <input type="checkbox" id="down5"><label for="down5" class="extra floor_item">+Ковролин</label>
                     </div>
                     <div class="flex"><h4>СТЕНЫ:</h4></div>
                     <div class="flexcheck">
-                        <input type="checkbox" id="wall1"><label for="wall1" class="extra">+Краска</label>
-                        <input type="checkbox" id="wall2"><label for="wall2" class="extra">+Обои</label>
-                        <input type="checkbox" id="wall3"><label for="wall3" class="extra">+Пробка</label>
-                        <input type="checkbox" id="wall4"><label for="wall4" class="extra">+Декоративная штукатурка</label>
-                        <input type="checkbox" id="wall5"><label for="wall5" class="extra">+Плитка</label>
-                        <input type="checkbox" id="wall6"><label for="wall6" class="extra">+Камень</label>
+                        <input type="checkbox" id="wall1"><label for="wall1" class="extra wall_item">+Краска</label>
+                        <input type="checkbox" id="wall2"><label for="wall2" class="extra wall_item">+Обои</label>
+                        <input type="checkbox" id="wall3"><label for="wall3" class="extra wall_item">+Пробка</label>
+                        <input type="checkbox" id="wall4"><label for="wall4" class="extra wall_item">+Декоративная штукатурка</label>
+                        <input type="checkbox" id="wall5"><label for="wall5" class="extra wall_item">+Плитка</label>
+                        <input type="checkbox" id="wall6"><label for="wall6" class="extra wall_item">+Камень</label>
                     </div>
 
                     <h2>Мебель:</h2>
                     <div class="flexcheck">
-                        <input type="checkbox" id="furniture1"><label for="furniture1" class="extra">+Кухня</label>
-                        <input type="checkbox" id="furniture2"><label for="furniture2" class="extra">+Диван</label>
-                        <input type="checkbox" id="furniture3"><label for="furniture3" class="extra">+Двуспальная кровать</label>
-                        <input type="checkbox" id="furniture4"><label for="furniture4" class="extra">+Кровать</label>
-                        <input type="checkbox" id="furniture5"><label for="furniture5" class="extra">+Шкаф</label>
-                        <input type="checkbox" id="furniture6"><label for="furniture6" class="extra">+Встроенный шкаф</label>
-                        <input type="checkbox" id="furniture7"><label for="furniture7" class="extra">+Стелаж</label>
-                        <input type="checkbox" id="furniture8"><label for="furniture8" class="extra">+Комод</label>
-                        <input type="checkbox" id="furniture9"><label for="furniture9" class="extra">+Стол обеденный</label>
-                        <input type="checkbox" id="furniture10"><label for="furniture10" class="extra">+Стол письменный</label>
-                        <input type="checkbox" id="furniture11"><label for="furniture11" class="extra">+Стулья</label>
-                        <input type="checkbox" id="furniture12"><label for="furniture12" class="extra">+Кресла</label>
+                        <input type="checkbox" id="furniture1"><label for="furniture1" class="extra furniture_item">+Кухня</label>
+                        <input type="checkbox" id="furniture2"><label for="furniture2" class="extra furniture_item">+Диван</label>
+                        <input type="checkbox" id="furniture3"><label for="furniture3" class="extra furniture_item">+Двуспальная кровать</label>
+                        <input type="checkbox" id="furniture4"><label for="furniture4" class="extra furniture_item">+Кровать</label>
+                        <input type="checkbox" id="furniture5"><label for="furniture5" class="extra furniture_item">+Шкаф</label>
+                        <input type="checkbox" id="furniture6"><label for="furniture6" class="extra furniture_item">+Встроенный шкаф</label>
+                        <input type="checkbox" id="furniture7"><label for="furniture7" class="extra furniture_item">+Стелаж</label>
+                        <input type="checkbox" id="furniture8"><label for="furniture8" class="extra furniture_item">+Комод</label>
+                        <input type="checkbox" id="furniture9"><label for="furniture9" class="extra furniture_item">+Стол обеденный</label>
+                        <input type="checkbox" id="furniture10"><label for="furniture10" class="extra furniture_item">+Стол письменный</label>
+                        <input type="checkbox" id="furniture11"><label for="furniture11" class="extra furniture_item">+Стулья</label>
+                        <input type="checkbox" id="furniture12"><label for="furniture12" class="extra furniture_item">+Кресла</label>
                     </div>
                     <h2>Бытовая техника:</h2>
                     <div class="flexcheck">
-                        <input type="checkbox" id="tech1"><label for="tech1" class="extra">+Газовая плита</label>
-                        <input type="checkbox" id="tech2"><label for="tech2" class="extra">+Варочная панель</label>
-                        <input type="checkbox" id="tech3"><label for="tech3" class="extra">+Стиральная машина</label>
-                        <input type="checkbox" id="tech4"><label for="tech4" class="extra">+Холодильник</label>
-                        <input type="checkbox" id="tech5"><label for="tech5" class="extra">+Утюг</label>
-                        <input type="checkbox" id="tech6"><label for="tech6" class="extra">+Электрочайник</label>
-                        <input type="checkbox" id="tech7"><label for="tech7" class="extra">+Микроволновая печь</label>
-                        <input type="checkbox" id="tech8"><label for="tech8" class="extra">+Телевизор</label>
-                        <input type="checkbox" id="tech9"><label for="tech9" class="extra">+Музыкальный центр</label>
-                        <input type="checkbox" id="tech10"><label for="tech10" class="extra">+Телефон</label>
+                        <input type="checkbox" id="tech1"><label for="tech1" class="extra tech_item">+Газовая плита</label>
+                        <input type="checkbox" id="tech2"><label for="tech2" class="extra tech_item">+Варочная панель</label>
+                        <input type="checkbox" id="tech3"><label for="tech3" class="extra tech_item">+Стиральная машина</label>
+                        <input type="checkbox" id="tech4"><label for="tech4" class="extra tech_item">+Холодильник</label>
+                        <input type="checkbox" id="tech5"><label for="tech5" class="extra tech_item">+Утюг</label>
+                        <input type="checkbox" id="tech6"><label for="tech6" class="extra tech_item">+Электрочайник</label>
+                        <input type="checkbox" id="tech7"><label for="tech7" class="extra tech_item">+Микроволновая печь</label>
+                        <input type="checkbox" id="tech8"><label for="tech8" class="extra tech_item">+Телевизор</label>
+                        <input type="checkbox" id="tech9"><label for="tech9" class="extra tech_item">+Музыкальный центр</label>
+                        <input type="checkbox" id="tech10"><label for="tech10" class="extra tech_item">+Телефон</label>
                     </div>
                     <h2>Прочие удобства:</h2>
                     <div class="flexcheck">
-                        <input type="checkbox" id="comfort1"><label for="comfort1" class="extra">+Интернет (оптоволкно)</label>
-                        <input type="checkbox" id="comfort2"><label for="comfort2" class="extra">+Интернет</label>
-                        <input type="checkbox" id="comfort3"><label for="comfort3" class="extra">+Спутниковое ТВ</label>
-                        <input type="checkbox" id="comfort4"><label for="comfort4" class="extra">+Кабельное ТВ</label>
-                        <input type="checkbox" id="comfort5"><label for="comfort5" class="extra">+WI-FI</label>
+                        <input type="checkbox" id="comfort1"><label for="comfort1" class="extra comfort_item">+Интернет (оптоволкно)</label>
+                        <input type="checkbox" id="comfort2"><label for="comfort2" class="extra comfort_item">+Интернет</label>
+                        <input type="checkbox" id="comfort3"><label for="comfort3" class="extra comfort_item">+Спутниковое ТВ</label>
+                        <input type="checkbox" id="comfort4"><label for="comfort4" class="extra comfort_item">+Кабельное ТВ</label>
+                        <input type="checkbox" id="comfort5"><label for="comfort5" class="extra comfort_item">+WI-FI</label>
                     </div>
                     <div class="flexButton">
                         <label for="tab2" title="Основные характеристики" class="button">Назад</label>
