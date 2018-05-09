@@ -1,26 +1,37 @@
 //Функция принимает количество комнат в виде числа и возвращает текcтовый вариант 
 function Room(room_numers){ 
-    let is_room = document.getElementById("room");  //две переменные для того чтобы понять квартира или комната
-    let is_flat = document.getElementById("flat");
-    let arr_for_flat = [["однокомнатная квартира", "квартира с одной комнатой", "однушка"], 
-                        ["двухкомнатная квартира", "квартира с двумя комнатами", "двушка"], 
-                        ["трехкомнатная квартира", "квартира с тремя комнатами", "трешка"],];
+    let is_house = document.getElementById("house");  
+    let is_parthouse = document.getElementById("parthouse");
+    let is_summerhouse = document.getElementById("summerhouse");
+    let is_area = document.getElementById("area");
+    let arr_for_house = [["однокомнатный дом", "дом с одной комнатой"], 
+                         ["двухкомнатный дом", "дом с двумя комнатами"], 
+                         ["трехкомнатный дом", "дом с тремя комнатами"]];
     
-    let arr_for_room = [["комната в однокомнатной квартире", "комната в квартире с одной комнатой", "комната в однушке"], 
-                        ["комната в двухкомнатной квартире", "комната в квартире с двумя комнатами", "комната в двушке"], 
-                        ["комната в трехкомнатной квартире", "комната в квартире с тремя комнатами", "комната в трешке"],];
+    let arr_for_parthouse = [["часть дома в однокомнатном доме", "часть дома в доме с одной комнатой"], 
+                             ["часть дома в двухкомнатном доме", "часть дома в доме с двумя комнатами"], 
+                             ["часть дома в трехкомнатном доме", "часть дома в доме с тремя комнатами"]];
+    let arr_for_summerhouse = [["однокомнатная дача", "дача с одной комнатой"], 
+                               ["двухкомнатная дача", "дача с двумя комнатами"], 
+                               ["трехкомнатная дача", "дача с тремя комнатами"]];
     let rand = 0;
     let arr = [];
-    if(is_room.checked)
-        arr = arr_for_room;
-    else if(is_flat.checked)
-        arr = arr_for_flat;
+    if(is_house.checked)
+        arr = arr_for_house;
+    else if(is_parthouse.checked)
+        arr = arr_for_parthouse;
+    else if(is_summerhouse.checked)
+        arr = arr_for_summerhouse;
+    else if(is_area.checked)
+        return "участок";
     else 
-        arr = arr_for_flat;
-    if(!room_numers && is_flat.checked)
-        return "квартира";
-    else if(!room_numers && is_room.checked)
-        return "комната";
+        arr = arr_for_house;
+    if(!room_numers && is_house.checked)
+        return "дом";
+    else if(!room_numers && is_parthouse.checked)
+        return "часть дома";
+    else if(!room_numers && is_summerhouse.checked)
+        return "дача";
     else if(!room_numers)
         return "";
     rand = Math.round(Math.random()*arr[room_numers-1].length);
@@ -28,6 +39,7 @@ function Room(room_numers){
         rand-=1;
     return arr[room_numers-1][rand];
 }
+
 
 //Функция принимает город и район, пример : Брест, Вулька, и возвращает случайную вариацию их сочетания 
 function CityAndDistrict(city,district){
@@ -54,52 +66,35 @@ function CityAndDistrict(city,district){
     return aboutCity + aboutDistrict + ". ";
 }
 
-//Функция принимает строку вида ЭТАЖ/ЭТАЖНОСТЬ и строку с типом стен дома и возвращает случайную вариацию их сочетания  
-function FloorAndType(floor_of_floors, type){
-    let n = 3;                                        // количество возможных вариаций
+//Функция принимает строку вида ЭТАЖНОСТЬ и строку с типом стен дома и возвращает случайную вариацию их сочетания  
+function FloorAndType(floors, type){
+    let n = 2;                                        // количество возможных вариаций
     let rand = Math.floor(1+Math.random()*n);
-    let building_levels = 0;
-    let level = 0;
-    let f_part ="", s_part = "", t_part = ""; //Переменные для того чтобы избежать ошибок при переданной пустой     
-                                              //переменной
-    let stop_index = 0;
-    let stop_simbols = ["/",".",",","_","|","-"," "];  //знаки которыми можно отделить этаж от их количества
-    let end = "";                               //переменная для правильного окончания этажей
-    stop_simbols.map(item => {if(floor_of_floors.indexOf(item)>-1) stop_index = floor_of_floors.indexOf(item)});
-    if(stop_index === 0){
-        level = floor_of_floors;
-        building_levels = "";
-    }
-    else{
-        level = floor_of_floors.slice(0,stop_index);
-        building_levels = floor_of_floors.slice(stop_index+1,floor_of_floors.length)
-    }
-    if(level % 10 == 3 )
-        end = "-ий ";
-    else if (level % 10 == 2 || level % 10 == 6 || level % 10 == 7 || level % 10 == 8)
-        end = "-ой "
-    else 
-        end = "-ый "
+    let p_one = "";
+    let p_two = "";
+    let end = "";
+    let type_end = "а";
+    if(floors % 10 > 1)
+        end = "а";
+    if(floors % 10 > 4)
+        end = "eй"
     switch(rand){
         case 1:
-            if(!!level){f_part = level+end+"этаж "};       //учитываем что какя-то из переменых пустая
-            if(!!type){s_part = type + "ного "};
-            if(!!building_levels){t_part = building_levels + "-и этажного дома"}else{t_part = " дома"};
+            if(!!floors){p_one = "Дом высотоый в " + floors +" этаж" + end +". "};    
+            if(!!type){p_two = "Материал стен: " + type +". "};   
             break;
         case 2:
-            if(!!level){f_part = "Квартира находится на " + level + " этаже "};
-            if(!!building_levels){s_part ="из " + building_levels };
-            if(!!type){t_part = ". Стены - " + type + "ные"};
-            break;
-        case 3:
-            if(!!level){f_part =""};
-            if(!!building_levels){s_part =""};
-            if(!!type){t_part =""};
-            break;
+            
+            if(!!floors){p_one = "Высота дома -  " + floors +" этаж" + end +". "};    
+            if(!!type){
+                if(type[type.length-1] == "ь")
+                    type_end = "ей";
+                if(type[type.length-1] == "ч")
+                    type_end = "ча";
+                p_two = "Стены сделаны из " + type.slice(0,type.length-1) + type_end + ". "
+            };
     }
-    if((!f_part && !s_part && !t_part)||(!f_part  && !s_part && t_part === " дома"))
-        return "";
-    return f_part + s_part + t_part + ". ";
+    return p_one + p_two;
 }
 
 //Функция принимает массив из площадей комнат и возвращает в случайном порядке либо "Площадь n-ой комнаты : ..." либо "Площадь комнат: ... , ..."
@@ -134,11 +129,14 @@ function SquereOfRooms(roomsSquere){
 
 //Функция принимает улицу и номер дома и возвращает  случайную вариацию их сочетания
 function StreetAndHouse(street, n_of_build){
+    let is_summerhouse = document.getElementById("summerhouse");
     let n = 3;                                        // количество возможных вариаций
     let rand = Math.floor(1+Math.random()*n);
-    let streetPart = "", nPart = "";
+    let streetPart = "", nPart = "", end = "";
     if(!street)
         return "";
+    if(is_summerhouse.checked)
+        end = "a";
     switch(rand){
         case 1:
             if(!!street){streetPart = "ул. " + street};   //учитываем что какя-то из переменых пустая
@@ -150,7 +148,7 @@ function StreetAndHouse(street, n_of_build){
                 else{streetPart = streetPart[1].toUpperCase() + streetPart.slice(2,streetPart.length); };
             return nPart + streetPart + ". ";
         case 3: 
-            if(!!street){streetPart = "Расположенна на улице " + street};
+            if(!!street){streetPart = "Расположен" + end + " на улице " + street};
             if(!!n_of_build){nPart = ", дом " + n_of_build};
             break;
     }
@@ -193,7 +191,7 @@ function CupboardInfo(cupboard, cupboardSq){
             if(!!cupboardSq){part_two = ", площадью " + cupboardSq + " кв. м"};
             break;
         case 2:
-            part_one = "В квартире есть кладовка";
+            part_one = "В доме есть кладовка";
             if(!!cupboardSq){part_two = " площадь которой " + cupboardSq + " кв. м"};
     }
     return part_one + part_two + ". ";
@@ -206,19 +204,19 @@ function LodgiaInfo(lodgia_value){
     switch(rand){
         case 1: 
             if(lodgia_value === 1)
-                return "Лоджии в квартире не имеется. ";
+                return "Лоджии в доме нет. ";
             else if(lodgia_value === 2)
-                return "В квартире имеется одна лоджия. ";
+                return "В доме имеется одна лоджия. ";
             else if(lodgia_value === 3)
-                return "В квартире имеется две лоджии. ";
+                return "В доме имеется две лоджии. ";
             break;
         case 2: 
             if(lodgia_value === 1)
-                return "Квартира без балконов.";
+                return "Дом без балконов.";
             else if(lodgia_value === 2)
-                return "В квартире есть один балкон. ";
+                return "В доме есть один балкон. ";
             else if(lodgia_value === 3)
-                return "В квартире есть два балкона. ";
+                return "В доме есть два балкона. ";
             break;
     }
     return "";
@@ -235,23 +233,23 @@ function GetRepairValue (){
     return res;
 }
 
-//Функция принимает число(1, 2, 3, 4, 5) и возвращает строку о состоянии квартиры
+//Функция принимает число(1, 2, 3, 4, 5) и возвращает строку о состоянии дома
 function QualityOfRepair(repair_value){
     switch(repair_value){
         case 1:
-            return "Кваритра находится в плохом состоянии. ";
+            return "Дом находится в плохом состоянии. ";
             break;
         case 2:
-            return "Кваритра находится не в самом лучшем состоянии. ";
+            return "Дом находится не в самом лучшем состоянии. ";
             break;
         case 3:
-            return "Кваритра находится в неплохом состоянии. ";
+            return "Дом находится в неплохом состоянии. ";
             break;
         case 4:
-            return "Кваритра находится в хорошем состоянии. ";
+            return "Дом находится в хорошем состоянии. ";
             break;
         case 5:
-            return "Кваритра находится в отличном состоянии. ";
+            return "Дом находится в отличном состоянии. ";
             break;
         default:
             return "";
@@ -321,25 +319,27 @@ function TypeOfDeal(){
 function ExtraInfo(){
     let extra_info = [];
     let res = "";
-    for(let i = 0; i < 8; i++){
+    for(let i = 0; i < 9; i++){
         extra_info[i] = document.getElementById("extra"+(i+1));
     }
     if(extra_info[0].checked)
-        res+="Имеется личная парковка. ";
+        res+="Имеется гараж. ";
     if(extra_info[1].checked)
-        res+="В вашем распоряжении будет подвал. ";
+        res+="Есть подвал. ";
     if(extra_info[2].checked)
-        res+="У дома есть детская площадка. ";
+        res+="У дома есть забор. ";
     if(extra_info[3].checked)
-        res+="В квартире вся сантехника новая. ";
+        res+="В доме вся сантехника новая. ";
     if(extra_info[4].checked)
-        res+="Квартира приватизирована. ";
+        res+="Дом приватизирован. ";
     if(extra_info[5].checked)
-        res+="Все лоджии застеклены. ";
+        res+="Проведена канализация. ";
     if(extra_info[6].checked)
-        res+="В доме есть консъерж. ";
+        res+="Есть водоснабжение. ";
     if(extra_info[7].checked)
-        res+="Также дом оснащен домофоном. ";
+        res+="Есть газоснабжение. ";
+    if(extra_info[8].checked)
+        res+="Электричество проведено. ";
     return res;
 }
 
@@ -372,23 +372,23 @@ function FurnitureInfo(){
     let res = GetAllChecked("furniture","furniture_item");
     if(!res)
         return "";
-    return "Из мебели в квартире есть: " + res;
+    return "Из мебели в доме есть: " + res;
 }
 
-//Функция определяет какие чекбоксы отмеченые в дополнительной информации о технике в квартире и возвращет строку с их учетом 
+//Функция определяет какие чекбоксы отмеченые в дополнительной информации о технике в доме и возвращет строку с их учетом 
 function TechInfo(){
     let res = GetAllChecked("tech","tech_item");
     if(!res)
         return ""; 
-    return "Бытовая техника в квартире: " + res;
+    return "Бытовая техника в доме: " + res;
 }
 
-//Функция определяет какие чекбоксы отмеченые в дополнительной информации об удобствах в квартире и возвращет строку с их учетом 
+//Функция определяет какие чекбоксы отмеченые в дополнительной информации об удобствах в доме и возвращет строку с их учетом 
 function ComfortInfo(){
     let res = GetAllChecked("comfort","comfort_item");
     if(!res)
         return ""; 
-    return "Удобства в квартире: " + res;
+    return "Удобства в доме: " + res;
 }
 
 //Функция определяет какое значение выбрано в типе входной двери 
@@ -435,11 +435,11 @@ function WindowsInfo(window_value){
         return "";
     switch(window_value){
         case 1:
-            return "В квартире стоят хорошие пластиковые(ПВХ) окна. ";
+            return "В доме стоят хорошие пластиковые(ПВХ) окна. ";
         case 2:
-            return "В квартире стоят деревянные окна. ";
+            return "В доме стоят деревянные окна. ";
         case 3:
-            return "В квартире установленны металлопластикавые окна. ";
+            return "В доме установленны металлопластикавые окна. ";
         default :
             return "";
     }
@@ -451,9 +451,9 @@ function LightInfo(light_value){
         return "";
     switch(light_value){
         case 1:
-            return "Освещение в квартире - диодное. ";
+            return "Освещение в доме - диодное. ";
         case 2:
-            return "В качестве освещаения в квартире используюстя лампы накаливания. ";
+            return "В качестве освещаения в доме используюстя лампы накаливания. ";
         case 3:
             return "Освещают квартиру энергосбеергающие лампы. ";
         default :
@@ -497,7 +497,7 @@ function result(){
     let type_of_walls = document.getElementById("wall").value;
     let year_of_found = document.getElementById("year").value;
     let n_of_rooms = document.getElementById("rooms").value;
-    let floor_of_floors = document.getElementById("level").value;
+    let floors = +document.getElementById("level").value;
     let cupboard = document.getElementById("cupboard").value;     //кладовка
     let cupboardSq = document.getElementById("cupboardSq").value;
     let lodgia = +document.getElementById("lodgia").value;           //балкон
@@ -524,8 +524,8 @@ function result(){
     let windows = +document.getElementById("windows").value;
     let light = +document.getElementById("light").value;
     
-    text_area.value = TypeOfDeal() + Room(n_of_rooms) + CityAndDistrict(city,district) +  
-    StreetAndHouse(street,n_of_build) + area_info + FloorAndType(floor_of_floors,type_of_walls) + 
+    text_area.value = TypeOfDeal() + Room(n_of_rooms) + CityAndDistrict(city,district) + 
+    StreetAndHouse(street,n_of_build) + area_info + FloorAndType(floors,type_of_walls) + 
     YearOfFoundation(year_of_found) + CupboardInfo(cupboard,cupboardSq) + 
     LodgiaInfo(lodgia) + QualityOfRepair(repair) + SquereInfo(squere_snb,live_squere) + 
     SquereOfRooms(rooms_squere) + BathroomInfo(bathroom,wc_squere, closet_squere, bathroom_squere) + 
