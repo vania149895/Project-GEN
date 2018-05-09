@@ -1,13 +1,15 @@
 function createTableDB() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            document.getElementById("tableDB").innerHTML = this.responseText;
-        }
-    };
-    xhttp.open("POST", "script/createTableDB.php", true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send();
+    if (confirm("Это приведет к удалению всех данных. Вы уверены что хотите исправить таблицы?")) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                document.getElementById("tableDB").innerHTML = this.responseText;
+            }
+        };
+        xhttp.open("POST", "script/createTableDB.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send();
+    }
 }
 function addUser() {
     $user = document.getElementById("user_input").value;
