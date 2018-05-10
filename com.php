@@ -174,8 +174,8 @@ if(!isset($_SESSION['access']) || $_SESSION['access']!=true){
                     <h2>Дополнительная информация о недвижимости:</h2>
                     <div class="flex">
                         <div class="form">
-                            <label for="doorIn">Входная дверь:</label>
-                            <select id="doorIn">
+                            <label for="EnterDoor">Входная дверь:</label>
+                            <select id="EnterDoor">
                                 <option value="">--Входная дверь--</option>
                                 <option value="1">Алюминевая</option>
                                 <option value="2">Деревянная</option>
@@ -204,8 +204,8 @@ if(!isset($_SESSION['access']) || $_SESSION['access']!=true){
                             </select>
                         </div>
                         <div class="form">
-                            <label for="windows">Освещение:</label>
-                            <select id="windows">
+                            <label for="light">Освещение:</label>
+                            <select id="light">
                                 <option value="">--Освещение--</option>
                                 <option value="1">Диодное</option>
                                 <option value="2">Лампы накаливания</option>
@@ -236,29 +236,29 @@ if(!isset($_SESSION['access']) || $_SESSION['access']!=true){
                     <h2>Отделка</h2>
                     <div class="flex"><h4>ПОТОЛОК:</h4></div>
                     <div class="flexcheck">
-                        <input type="checkbox" id="up1"><label for="up1" class="extra">+Побелка</label>
-                        <input type="checkbox" id="up2"><label for="up2" class="extra">+Краска</label>
-                        <input type="checkbox" id="up3"><label for="up3" class="extra">+Обои</label>
-                        <input type="checkbox" id="up4"><label for="up4" class="extra">+Потолочная плитка</label>
-                        <input type="checkbox" id="up5"><label for="up5" class="extra">+Гипсокартон</label>
-                        <input type="checkbox" id="up6"><label for="up6" class="extra">+Натяжной</label>
+                        <input type="checkbox" id="up1"><label for="up1" class="extra ceiling_item">+Побелка</label>
+                        <input type="checkbox" id="up2"><label for="up2" class="extra ceiling_item">+Краска</label>
+                        <input type="checkbox" id="up3"><label for="up3" class="extra ceiling_item">+Обои</label>
+                        <input type="checkbox" id="up4"><label for="up4" class="extra ceiling_item">+Потолочная плитка</label>
+                        <input type="checkbox" id="up5"><label for="up5" class="extra ceiling_item">+Гипсокартон</label>
+                        <input type="checkbox" id="up6"><label for="up6" class="extra ceiling_item">+Натяжной</label>
                     </div>
                     <div class="flex"><h4>ПОЛ:</h4></div>
                     <div class="flexcheck">
-                        <input type="checkbox" id="down1"><label for="down1" class="extra">+Ламинат</label>
-                        <input type="checkbox" id="down2"><label for="down2" class="extra">+Паркет</label>
-                        <input type="checkbox" id="down3"><label for="down3" class="extra">+Плитка</label>
-                        <input type="checkbox" id="down4"><label for="down4" class="extra">+Линолеум</label>
-                        <input type="checkbox" id="down5"><label for="down5" class="extra">+Ковролин</label>
+                        <input type="checkbox" id="down1"><label for="down1" class="extra floor_item">+Ламинат</label>
+                        <input type="checkbox" id="down2"><label for="down2" class="extra floor_item">+Паркет</label>
+                        <input type="checkbox" id="down3"><label for="down3" class="extra floor_item">+Плитка</label>
+                        <input type="checkbox" id="down4"><label for="down4" class="extra floor_item">+Линолеум</label>
+                        <input type="checkbox" id="down5"><label for="down5" class="extra floor_item">+Ковролин</label>
                     </div>
                     <div class="flex"><h4>СТЕНЫ:</h4></div>
                     <div class="flexcheck">
-                        <input type="checkbox" id="wall1"><label for="wall1" class="extra">+Краска</label>
-                        <input type="checkbox" id="wall2"><label for="wall2" class="extra">+Обои</label>
-                        <input type="checkbox" id="wall3"><label for="wall3" class="extra">+Пробка</label>
-                        <input type="checkbox" id="wall4"><label for="wall4" class="extra">+Декоративная штукатурка</label>
-                        <input type="checkbox" id="wall5"><label for="wall5" class="extra">+Плитка</label>
-                        <input type="checkbox" id="wall6"><label for="wall6" class="extra">+Камень</label>
+                        <input type="checkbox" id="wall1"><label for="wall1" class="extra wall_item">+Краска</label>
+                        <input type="checkbox" id="wall2"><label for="wall2" class="extra wall_item">+Обои</label>
+                        <input type="checkbox" id="wall3"><label for="wall3" class="extra wall_item">+Пробка</label>
+                        <input type="checkbox" id="wall4"><label for="wall4" class="extra wall_item">+Декоративная штукатурка</label>
+                        <input type="checkbox" id="wall5"><label for="wall5" class="extra wall_item">+Плитка</label>
+                        <input type="checkbox" id="wall6"><label for="wall6" class="extra wall_item">+Камень</label>
                     </div>
                     <div class="flexButton">
                         <label for="tab2" title="Основные характеристики" class="button">Назад</label>
@@ -307,5 +307,6 @@ if(!isset($_SESSION['access']) || $_SESSION['access']!=true){
             <a href="index.php">Выход</a>
         </div>
     </footer>
+    <script src="js/com.js"></script>
 </body>
 </html>

@@ -407,5 +407,6 @@ if(!isset($_SESSION['access']) || $_SESSION['access']!=true){
             <a href="index.php">Выход</a>
         </div>
     </footer>
+    <script src="js/house.js"></script>
 </body>
 </html>

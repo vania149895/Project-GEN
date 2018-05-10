@@ -455,7 +455,7 @@ function LightInfo(light_value){
         case 2:
             return "В качестве освещаения в доме используюстя лампы накаливания. ";
         case 3:
-            return "Освещают квартиру энергосбеергающие лампы. ";
+            return "Освещают дом энергосбеергающие лампы. ";
         default :
             return "";
     }
@@ -497,7 +497,7 @@ function result(){
     let type_of_walls = document.getElementById("wall").value;
     let year_of_found = document.getElementById("year").value;
     let n_of_rooms = document.getElementById("rooms").value;
-    let floors = +document.getElementById("level").value;
+    let floors = document.getElementById("level").value;
     let cupboard = document.getElementById("cupboard").value;     //кладовка
     let cupboardSq = document.getElementById("cupboardSq").value;
     let lodgia = +document.getElementById("lodgia").value;           //балкон

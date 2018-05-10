@@ -56,7 +56,7 @@ function CityAndDistrict(city,district){
 
 //Функция принимает строку вида ЭТАЖ/ЭТАЖНОСТЬ и строку с типом стен дома и возвращает случайную вариацию их сочетания  
 function FloorAndType(floor_of_floors, type){
-    let n = 3;                                        // количество возможных вариаций
+    let n = 2;                                        // количество возможных вариаций
     let rand = Math.floor(1+Math.random()*n);
     let building_levels = 0;
     let level = 0;
@@ -90,11 +90,6 @@ function FloorAndType(floor_of_floors, type){
             if(!!level){f_part = "Квартира находится на " + level + " этаже "};
             if(!!building_levels){s_part ="из " + building_levels };
             if(!!type){t_part = ". Стены - " + type + "ные"};
-            break;
-        case 3:
-            if(!!level){f_part =""};
-            if(!!building_levels){s_part =""};
-            if(!!type){t_part =""};
             break;
     }
     if((!f_part && !s_part && !t_part)||(!f_part  && !s_part && t_part === " дома"))
